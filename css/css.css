@@ -109,55 +109,108 @@ body {
   margin: 0;
 }
 
-/* Introduktion-sektion */
+/* Generelle stilarter */
 .intro {
-  display: flex;
-  flex-direction: row; /* Gør sektionen til en horisontal layout */
-  align-items: center;
-  justify-content: space-between;
+  background-color: #2b2b2b; /* Baggrundsfarve */
   padding: 40px 20px;
-  background-color: #2b2b2b; /* Baggrundsfarve for sektionen */
-  color: #ffffff; /* Hvid tekstfarve */
+  color: #ffffff;
 }
 
 .intro-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: row;
-  max-width: 1200px; /* Maksimal bredde for container */
-  margin: 0 auto; /* Centrerer containeren */
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Overskriftsområde */
+.header-highlight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.highlight-title {
+  background-color: #ce6f47;
+  color: #ffffff;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 5px 0 0 5px;
+}
+
+.highlight-subtitle {
+  background-color: #1e4383;
+  color: #ffffff;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  font-weight: normal;
+  border-radius: 0 5px 5px 0;
+}
+
+/* Introduktion Sektion */
+.intro {
+  background-color: #2b2b2b; 
+  padding: 40px 20px; /* Luft omkring sektionen */
+  color: #ffffff;
+}
+
+/* Container for hele sektionen */
+.intro-container {
+  max-width: 1200px;
+  margin: 0 auto; /* Centrer sektionen */
+}
+
+/* Overskrifter */
+.intro-header {
+  display: flex;
+  gap: 5px; /* Små mellemrum mellem overskrifter */
+  margin-bottom: 20px; /* Luft under overskrifter */
+}
+
+.highlight-title {
+  background-color: #ce6f47; 
+  color: #ffffff;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 5px 0 0 5px;
+}
+
+.highlight-subtitle {
+  background-color: #1e4383; 
+  color: #ffffff;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  border-radius: 0 5px;
+}
+
+/* Indhold: Tekst og billede */
+.intro-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 20px; /* Afstand mellem tekst og billede */
 }
 
-.intro-tekst {
-  flex: 1;
-  padding: 20px;
-  background-color: #ce6f47; 
-  border-radius: 8px; 
-  color: #fff; /* Tekstfarve */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Let skygge */
-}
-
-.intro-tekst h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.intro-tekst p {
+/* Tekstblok */
+.intro-text {
+  flex: 2; /* Giv teksten mere plads */
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.6; /* For bedre læsbarhed */
+  margin: 0; /* Fjern unødvendig margin */
 }
 
-.intro-billede {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Billedeblok */
+.intro-image {
+  flex: 1; /* Giv billedet mindre plads */
 }
 
-.intro-billede img {
+.intro-image img {
   max-width: 100%;
   border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Let skygge */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .features {
