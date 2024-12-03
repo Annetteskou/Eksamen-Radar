@@ -60,3 +60,18 @@
   .nav-links li:hover .dropdown {
     display: block; /* Viser dropdown, når musen er over */
   }
+
+  .newsletter {
+    position: relative;
+  }
+
+  .newsletter::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 20px;
+    background-color: #e46e5b; /* Dekorativ linje */
+  }
