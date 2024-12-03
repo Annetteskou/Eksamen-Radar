@@ -109,14 +109,55 @@ body {
   margin: 0;
 }
 
-.intro-container {
+/* Introduktion-sektion */
+.intro {
   display: flex;
-  padding: 20px;
+  flex-direction: row; /* Gør sektionen til en horisontal layout */
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  background-color: #2b2b2b; /* Baggrundsfarve for sektionen */
+  color: #ffffff; /* Hvid tekstfarve */
 }
 
-.welcome {
+.intro-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px; /* Maksimal bredde for container */
+  margin: 0 auto; /* Centrerer containeren */
+  gap: 20px; /* Afstand mellem tekst og billede */
+}
+
+.intro-tekst {
   flex: 1;
   padding: 20px;
+  background-color: #ce6f47; 
+  border-radius: 8px; 
+  color: #fff; /* Tekstfarve */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Let skygge */
+}
+
+.intro-tekst h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.intro-tekst p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.intro-billede {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-billede img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Let skygge */
 }
 
 .features {
