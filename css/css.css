@@ -39,7 +39,7 @@
   position: relative;
 }
 
-/* Parent container for buttons */
+/* Parent container for firkanter */
 .intro-buttons {
   display: flex;
   align-items: center; /* Centerer knapperne vertikalt */
@@ -52,13 +52,13 @@
   padding: 20px 30px; /* Indre afstand */
   font-size: 1.2rem;
   font-weight: bold;
-  color: #ffffff; /* Tekstfarve */
+  color: #ffffff; 
   text-align: center;
   cursor: pointer;
   position: relative;
 }
 
-/* Specifik styling for Velkommen-knap */
+/* Specifik styling for Velkommen-firkant */
 .intro-button.velkommen {
   background-color: #b65c43; 
   width: 300px;
@@ -66,17 +66,17 @@
   display: flex; /* Gør knappen til en flex-container */
   align-items: center; /* Centrerer indholdet vertikalt */
   justify-content: center; /* Centrerer indholdet horisontalt */
-  color: #000; /* Sort tekstfarve */
-  font-size: 1.6rem; /* Juster tekststørrelse */
+  color: #000; 
+  font-size: 1.6rem; 
 }
 
 
-/* Specifik styling for Kultur-knap */
+/* Specifik styling for Kultur-firkant */
 .intro-button.kultur {
   background-color: #232768;
   width: 400px;
   right: 10px;
-  font-size: 1.3rem; /* Juster tekststørrelse */
+  font-size: 1.3rem; 
 }
 
 /* Tilføj dekorative linjer til Kultur-knap */
@@ -87,27 +87,29 @@
   right: 1px;
   height: 6px;
   width: 70px;
-  background-color: #b65c43; /* Brun farve */
+  background-color: #b65c43; 
 }
 
+/* Intro brødtekst */
 .intro-content {
-    position: relative;
-    max-width: 55%; 
-    top: 30px;
-    z-index: 2; /* Sørg for, at teksten er foran billedet */
-    margin-left: 30px; /* Plads fra venstre */
-    line-height: 2; /* Gør linjeafstanden bedre læselig */
-    font-size: 25px;
+  position: relative;
+  max-width: 55%; 
+  top: 30px;
+  z-index: 2; /* Sørg for, at teksten er foran billedet */
+  margin-left: 30px; /* Plads fra venstre */
+  line-height: 2; /* Gør linjeafstanden bedre læselig */
+  font-size: 25px;
 }
 
+/* Intro billede */
 .intro-image {
-    position: relative;
-    display: block;
-    top: -300px; 
-    left: 500px; 
-    width: 60%; /* Skaler billedet */
-    height: auto; 
-    z-index: 1; /* Sørg for, at billedet ikke overlapper teksten */
+  position: relative;
+  display: block;
+  top: -300px; 
+  left: 500px; 
+  width: 60%; /* Skaler billedet */
+  height: auto; 
+  z-index: 1; /* Sørg for, at billedet ikke overlapper teksten */
 }
 
 .intro-image img {
@@ -116,6 +118,7 @@
   display: block; /* Fjern eventuel ekstra afstand */
 }
 
+/* Intro blå firkant ved siden af billede */
 .intro-image::before {
   content: '';
   position: absolute;
@@ -129,6 +132,7 @@
   z-index: 2; /* Sørg for, at den vises over baggrunden */
 }
 
+/* Vil du vide mere? */
 .more-about-radar {
   text-align: center; 
   margin-top: -280px;
@@ -139,7 +143,6 @@
   color: #ffffff; 
   font-weight: bold; 
 }
-
 
 /* ----RELEVANTE ARTIKLER SEKTION---- */
 .artikler {
@@ -163,6 +166,7 @@
   transform: scale(1.05); /* Forstørrer artiklen lidt */
 }
 
+/* Artikel billeder */
 .artikel img {
   width: 100%;
   height: auto;
@@ -173,11 +177,13 @@
   transform: scale(1.1); /* Zoomer billedet lidt mere ved hover */
 }
 
+/* Artikel overskift under billederne */
 .artikel h3 {
   margin: 10px 0;
   font-size: 1.2rem;
 }
 
+/* Artikel brødtekst under billederne */
 .artikel p {
   font-size: 1rem;
   line-height: 1.5;
@@ -196,7 +202,7 @@
 .artikler::after {
   content: "";
   position: absolute;
-  bottom: -475px;
+  bottom: -485px;
   left: 50%;
   transform: translateX(-50%);
   width: 300px;
@@ -206,27 +212,27 @@
 
 /* Gør "Læs mere" større */
 .read-more {
-  font-size: 1.5rem; /* Øger font-størrelsen */
-  font-weight: bold; /* Gør teksten fed for mere synlighed */
-  text-align: center; /* Sørg for, at teksten er centreret */
+  font-size: 1.5rem; 
+  font-weight: bold; 
+  text-align: center; 
   display: inline-block; /* Holder størrelsen konsekvent */
   margin-top: 10px; /* Lidt luft ovenover */
 }
 
+/* ----RESPONSIV TIL IPHONE---- */
 @media (max-width: 480px) {
 
+/* Hero sektion*/
 .hero {
-  height: 250px; /* Mindre højde for mobilen */
-  background-size: cover;
-  background-position: center;
+  height: 250px; 
+  background-size: cover; 
+  background-position: center; 
 }
 
 .hero-content {
-  margin: 0;
-  padding: 10px;
-  background-color: rgba(230, 110, 81, 0.8);
-  text-align: center;
+  padding: 10px; 
   margin-left: 100px;
+  background-color: rgba(230, 110, 81, 0.8);
 }
 
 .hero-content h1 {
@@ -234,6 +240,7 @@
   color: #fff;
 }
 
+/* Intro sektion */
 .intro-button.kultur::after {
   display: none;
 }
@@ -250,8 +257,10 @@
 
 .intro-content {
     max-width: 100%;
-    font-size: 1rem;
+    font-size: 1.4rem;
     margin: 0;
+    margin-top: -30px;
+
 }
 
 .intro-buttons {
@@ -272,26 +281,28 @@
 }
 
 .intro-image img {
-    width: 100%;
-    display: block; /* Sørg for, at billedet ikke skjules */
+  width: 100%;
+  display: block; /* Sørg for, at billedet ikke skjules */
 }
 
 .intro-image::before {
 display: none;
 }
+
+/* Vil du vide mere sektion */
 .more-about-radar {
   margin-top: 0px;
 }
 
+/* Artikel sektion */
 .artikler::after{
-bottom: -365px;
+display: none;
 }
 
 .artikler {
   flex-direction: column;
   padding: 10px;
   gap: 20px;
-  margin-top: 10px;
 }
 
 .artikel {
@@ -304,14 +315,130 @@ bottom: -365px;
 }
 
 .artikel h3 {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .artikel p {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+}
+
+.artikel:hover {
+  transform: none; 
+  transition: none; 
+}
+
+.artikel:hover img {
+  transform: none; 
+  transition: none; 
 }
 
 .read-more {
   font-size: 2rem;
+}
+}
+
+/* ----RESPONSIVT TIL IPAD ---- */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+/* Hero sektion */
+  .hero-content {
+  padding: 20px; 
+  margin-left: 100px;
+}
+  
+.hero-content h1 {
+  font-size: 2.7rem;
+}
+
+/* Intro sektion */
+.intro-button.velkommen {
+  width: 400px;
+  height: 100px;
+  font-size: 2rem; 
+}
+
+.intro-button.kultur {
+  width: 500px;
+  height: 80px;
+  font-size: 1.9rem; 
+}
+
+.intro-image {
+  position: static; /* Fjern absolut positionering */
+  margin: 0 auto; /* Centrer billedet */
+  margin-top: -430px;
+  margin-right: 0px;
+}
+  
+.intro-image img {
+  width: 100%;
+  margin-top: -115px;
+}
+
+.intro-content {
+  font-size: 2rem;
+}
+
+.intro-image::before {
+  margin-top: 170px;
+}
+
+/* Vil du vide mere sektion */
+.more-about-radar h2 {
+  font-size: 2.6rem; 
+}
+
+/* Artikler sektion */
+.artikler::after{
+  display: none;
+}
+
+.more-about-radar {
+  margin-top: 200px;
+  margin-bottom: -20px;
+}
+  
+.artikler::after{
+  display: none;
+  }
+  
+.artikler {
+  display: flex;
+  flex-wrap: wrap; /* Tillad flere rækker */
+  justify-content: space-between; /* Jævn fordeling af artikler */
+  gap: 30px;
+  padding: 20px 60px;
+}
+.artikel {
+  flex: 1 1 calc(33% - 20px); /* Tre kolonner */
+  max-width: calc(33% - 20px);
+  text-align: center;
+}
+.artikel img {
+  width: 120%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.artikel h3 {
+  font-size: 1.6rem;
+}
+
+.artikel p {
+  font-size: 1.2rem;
+}
+
+.artikel:hover {
+  transform: none; 
+  transition: none; 
+}
+
+.artikel:hover img {
+  transform: none; 
+  transition: none; 
+}
+
+.read-more {
+  font-size: 2.2rem;
 }
 }

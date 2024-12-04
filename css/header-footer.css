@@ -276,7 +276,7 @@ body {
   vertical-align: middle; /* Juster lodret med tekst */
 }
 
-/* ----RESPONSIVT DESIGN---- */
+/* ----RESPONSIVT TIL IPHONE---- */
 @media (max-width: 768px) {
 .header-container {
   flex-direction: column;
@@ -301,6 +301,7 @@ body {
   position: absolute;
   top: 20px;
   right: 20px;
+  font-size: 50px;
   z-index: 4;
 }
 
@@ -308,6 +309,20 @@ body {
   display: none;
   flex-direction: column;
   align-items: center;
+  font-size: 1.4rem;
+}
+
+.nav-links a:hover {
+  background-color: #232768;
+  border-radius: 5px;
+}
+
+.dropdown li {
+  width: 200px; /* Ens bredde til dropdown-elementer */
+}
+
+.dropdown a {
+  padding: 30px;
 }
 
 .menu-toggle:checked + .hamburger-menu + nav .nav-links {
@@ -336,7 +351,7 @@ body {
 
 .nyhedsbrev-container p {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-bottom: 20px;
 }
 
@@ -347,10 +362,12 @@ body {
 
 .nyhedsbrev-form input {
   width: 90%;
+  height: 60px;
 }
 
 .nyhedsbrev-form button {
   width: 50%;
+  height: 50px;
 }
 
 .nyhedsbrev-decor-left,
@@ -385,9 +402,122 @@ body {
 }
 
 .footer-social-ikoner img {
-  width: 30px;
-  height: 30px;
   margin-bottom: 30px;
   margin-top: -30px;
 }
 }
+
+/* ----RESPONSIVT TIL IPAD---- */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 100%;
+    margin-bottom: 10px;
+    right: 400px;
+  }
+  .menu-toggle {
+    display: none; /* Sørg for, at check-box altid er skjult */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+  }
+  
+  .hamburger-menu {
+    display: block; /* Vis hamburger-menu på små skærme */
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    font-size: 90px;
+    z-index: 4;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    font-size: 40px;
+  }
+  
+  .menu-toggle:checked + .hamburger-menu + nav .nav-links {
+    display: flex; /* Vis menuen ved toggle */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a:hover {
+    background-color: #232768;
+    border-radius: 5px;
+  }
+
+  .dropdown li {
+    width: 400px; /* Ens bredde til dropdown-elementer */
+  }
+  
+  .dropdown a {
+    padding: 30px;
+  }
+
+  .nyhedsbrev-container p {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+
+  .nyhedsbrev-form {
+    width: 100%;
+    align-items: center;
+  }
+  
+  .nyhedsbrev-form input {
+    width: 110%;
+    height: 65px;
+  }
+  
+  .nyhedsbrev-form button {
+    width: 60%;
+    height: 60px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .footer-info, .footer-kontakt, .footer-tider {
+    flex: none;
+    width: 100%;
+    font-size: 2rem;
+  }
+  
+  .footer-info :first-child{
+    font-weight: bold;
+  }
+  
+  .footer-tider-grid {
+    display: flex;
+    justify-content: center; /* Centrerer kolonnerne */
+    gap: 40px; /* Afstand mellem de to kolonner */
+  }
+  
+  .footer-tider-grid div {
+    text-align: left; /* Juster tekst til venstre i hver kolonne */
+  }
+
+  .footer-kontakt .footer-social-ikoner img {
+    width: 70px; /* Ikonernes bredde */
+    height: 70px; /* Ikonernes højde */
+  }
+
+  .footer-social-ikoner img {
+    margin-bottom: 30px;
+    margin-top: -30px;
+  }
+  }
