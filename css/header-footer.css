@@ -9,31 +9,31 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   color: #fff;
-  background-color: #333;
+  background-color: #2f2f2f;
 }
 
-/* Header */
+/* ----HEADER SEKTION---- */
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #1a1a1a;
+  background-color: #2f2f2f;
 }
 
-/* Logo */
+/* ----LOGO SEKTION---- */
 .logo {
   height: 70px;
 }
 
-/* Generel stil for navigation */
+/* ----MENUBAR SEKTION---- */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 30px;
   padding: 0;
   margin: 0;
-  background-color: #1a1a1a;
+  background-color: #2f2f2f;
 }
 
 .nav-links > li {
@@ -58,7 +58,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #222;
+  background-color: #222020;
   display: none; /* Skjuler dropdown som standard */
   padding: 0;
   margin: 0;
@@ -77,9 +77,9 @@ body {
   display: block; /* Viser dropdown, når musen er over */
 }
 
-  /* Nyhedsbrevssektion */
+  /* ----NYHEDSBREV SEKTION---- */
 .nyhedsbrev {
-  background-color: #333; /* Baggrund for sektionen */
+  background-color: #2f2f2f;/* Baggrund for sektionen */
   padding: 100px 0;
   text-align: center;
   position: relative;
@@ -97,7 +97,7 @@ body {
 
 /* Container for boksen */
 .nyhedsbrev-container {
-  background-color: #d27155; /* Baggrundsfarve for boksen */
+  background-color: #b65c43; /* Baggrundsfarve for boksen */
   padding: 40px;
   max-width: 700px;
   margin: 0 auto;
@@ -113,7 +113,7 @@ body {
   position: absolute;
   width: 180px; /* Gør dem længere */
   height: 80px; /* Gør dem højere */
-  background-color: #3b5aa3;
+  background-color: #232768;
   margin-bottom: -20%;
   z-index: -1; /* Sørger for, at de er under det orange */
 }
@@ -150,10 +150,10 @@ body {
 .nyhedsbrev-form input {
   width: 250px; 
   padding: 12px;
-  border: 2px solid #333; /* Sort kant */
+  border: 2px solid #2f2f2f; /* Sort kant */
   font-size: 1rem;
   background-color: #f4f4f4; 
-  color: #333;
+  color: #2f2f2f;
 }
 
 .nyhedsbrev-form input::placeholder {
@@ -167,15 +167,16 @@ body {
   color: rgb(6, 6, 6);
   font-size: 1rem;
   font-weight: bold;
-  border: 2px solid #333;
+  border: 2px solid #2f2f2f;
   cursor: pointer;
   text-align: center;
 }
 
 .nyhedsbrev-form button:hover {
-  background-color: #555; /* Hover-effekt */
+  background-color: #2f2f2f;/* Hover-effekt */
 }
 
+/* Orange pynte streg */
 .nyhedsbrev::before {
   content: "";
   position: absolute;
@@ -184,21 +185,76 @@ body {
   transform: translateX(-50%);
   width: 300px;
   height: 25px;
-  background-color: #e46e5b; /* Dekorativ linje */
+  background-color: #b65c43; /* Dekorativ linje */
 }
 
-/* Footer sektion */
+/* ----FOOTER SEKTION---- */
 .footer {
-  background-color: #e46e5b;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px;
-  color: #fff;
+  background-color: #b65c43; 
+  padding: 40px 20px; 
+  color: #ffffff; 
   text-align: center;
 }
 
-.footer div {
-  flex: 1 1 auto;
-  margin: 10px;
+.footer-container {
+  display: flex; 
+  justify-content: space-between; 
+  max-width: 1200px; 
+  margin: 0 auto; /* Centrer containeren */
+  flex-wrap: wrap; /* Responsivt layout */
+  gap: 20px; /* Afstand mellem kolonner */
+}
+
+.footer-tider-grid {
+  display: flex;
+  justify-content: center; /* Centrerer kolonnerne */
+  gap: 40px; /* Afstand mellem de to kolonner */
+}
+
+.footer-tider-grid div {
+  text-align: left; /* Juster tekst til venstre i hver kolonne */
+}
+
+.footer-info,
+.footer-kontakt,
+.footer-tider {
+  flex: 1 1 300px; /* Hver sektion tager lige meget plads */
+  text-align: center; 
+  font-size: 1.2rem; 
+}
+
+.footer-info p,
+.footer-kontakt p,
+.footer-tider p {
+  margin: 8px 0; /* Reduceret afstand mellem linjer */
+}
+
+.footer-kontakt .footer-social-ikoner {
+  margin-top: 100px; /* Afstand til ikonerne */
+}
+
+.footer-kontakt .footer-social-ikoner a {
+  display: inline-block;
+  margin-right: 15px; /* Afstand mellem ikoner */
+}
+
+.footer-kontakt .footer-social-ikoner img {
+  width: 40px; /* Ikonernes bredde */
+  height: 40px; /* Ikonernes højde */
+  vertical-align: middle; /* Juster lodret med tekst */
+}
+
+
+/* ----RESPONSIVT DESIGN SEKTION---- */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stabler sektionerne vertikalt */
+    text-align: center; /* Centrér tekst på mindre skærme */
+  }
+
+  .footer-info,
+  .footer-kontakt,
+  .footer-tider {
+    margin: 20px 0; /* Mere plads mellem sektioner */
+  }
 }

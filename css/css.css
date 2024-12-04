@@ -1,17 +1,11 @@
-
 /* Define variables in the :root */
- :root {
-   --contrast: lime;
-   --backgr: #000;
- }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --blå: #232768;
+  --orange: #b65c43;
+  --backgr: #2f2f2f;
 }
 
-/* Hero (store billede) sektion*/
+/* ----HERO (STOR BILLEDE) SEKTION----*/
 .hero {
   position: relative;
   background-image: url('../images/forside-hero.webp'); 
@@ -35,14 +29,120 @@
   font-weight: bold;
 }
 
-/* Andre relevante artikler sektion */
+/* ----INTRODUKTION SEKTION---- */
+.intro-section {
+  background-color: #2f2f2f; /* Baggrundsfarve */
+  padding: 40px 20px;
+  position: relative;
+  color: #fff;
+  margin-bottom: 230px;
+}
+
+.intro-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+/* Parent container for buttons */
+.intro-buttons {
+  display: flex;
+  align-items: center; /* Centerer knapperne vertikalt */
+  gap: 10px; /* Afstand mellem knapper */
+}
+
+/* Fælles stil for knapper */
+.intro-button {
+  display: inline-block;
+  padding: 20px 30px; /* Indre afstand */
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff; /* Tekstfarve */
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Specifik styling for Velkommen-knap */
+.intro-button.velkommen {
+  background-color: #b65c43; 
+  width: 300px;
+  height: 100px;
+}
+
+/* Specifik styling for Kultur-knap */
+.intro-button.kultur {
+  background-color: #232768;
+  width: 400px;
+  right: 10px;
+}
+
+/* Tilføj dekorative linjer til Kultur-knap */
+.intro-button.kultur::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  right: 1px;
+  height: 6px;
+  width: 70px;
+  background-color: #b65c43; /* Brun farve */
+}
+
+.intro-content {
+    position: relative;
+    max-width: 55%; 
+    z-index: 2; /* Sørg for, at teksten er foran billedet */
+    margin-left: 20px; /* Plads fra venstre */
+    line-height: 2; /* Gør linjeafstanden bedre læselig */
+    font-size: 25px;
+}
+
+.intro-image {
+    position: absolute;
+    top: 100px; 
+    right: 50px; 
+    width: 60%; /* Skaler billedet */
+    height: auto; 
+    z-index: 1; /* Sørg for, at billedet ikke overlapper teksten */
+}
+
+.intro-image img {
+  width: 100%;
+  height: auto;
+  margin-left: 100px;
+}
+
+
+/* Responsivt layout */
+@media (max-width: 768px) {
+  .intro-container {
+    flex-direction: column;
+}
+
+.intro-image {
+    position: static; /* Fjern positionering */
+    width: 100%; /* Billedet fylder hele bredden */
+    margin-top: 20px;
+}
+
+.intro-content {
+    max-width: 100%; /* Teksten fylder hele bredden */
+    margin-left: 0;
+}
+}
+
+
+/* ----RELEVANTE ARTIKLER SEKTION---- */
 .cards {
   display: flex;
   flex-wrap: wrap;
   gap: 80px;
   justify-content: center;
   padding: 20px;
-  background-color: #3b5aa3;
+  background-color: #232768;
 }
 
 .card {
@@ -75,4 +175,16 @@
   font-weight: bold;
   margin-top: 10px;
   display: inline-block;
+}
+
+/* Orange pynte linje */
+.cards::after {
+  content: "";
+  position: absolute;
+  bottom: -425px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 10px;
+  background-color: #b65c43; /* Dekorativ linje */
 }
