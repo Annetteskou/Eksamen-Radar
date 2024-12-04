@@ -35,7 +35,6 @@
   padding: 40px 20px;
   position: relative;
   color: #fff;
-  margin-bottom: 230px;
 }
 
 .intro-container {
@@ -71,7 +70,14 @@
   background-color: #b65c43; 
   width: 300px;
   height: 100px;
+  display: flex; /* Gør knappen til en flex-container */
+  align-items: center; /* Centrerer indholdet vertikalt */
+  justify-content: center; /* Centrerer indholdet horisontalt */
+  color: #000; /* Sort tekstfarve */
+  font-size: 1.2rem; /* Juster tekststørrelse */
+  font-weight: bold; /* Gør teksten fed */
 }
+
 
 /* Specifik styling for Kultur-knap */
 .intro-button.kultur {
@@ -115,6 +121,30 @@
   margin-left: 100px;
 }
 
+.intro-image::before {
+  content: '';
+  position: absolute;
+  top: -20px; 
+  right: -120px; 
+  width: 150px; /* Firkantens bredde */
+  height: 100px; /* Firkantens højde */
+  border: 20px solid #232768; 
+  border-left: none; /* Fjern venstre kant */
+  border-bottom: none; /* Fjern nederste kant */
+  z-index: 2; /* Sørg for, at den vises over baggrunden */
+}
+
+.more-about-radar {
+  text-align: center; 
+  margin-top: 200px;
+}
+
+.more-about-radar h2 {
+  font-size: 2rem; 
+  color: #ffffff; 
+  font-weight: bold; 
+}
+
 
 /* Responsivt layout */
 @media (max-width: 768px) {
@@ -124,28 +154,28 @@
 
 .intro-image {
     position: static; /* Fjern positionering */
-    width: 100%; /* Billedet fylder hele bredden */
+    width: 100%; 
     margin-top: 20px;
 }
 
 .intro-content {
-    max-width: 100%; /* Teksten fylder hele bredden */
+    max-width: 100%; 
     margin-left: 0;
 }
 }
 
 
 /* ----RELEVANTE ARTIKLER SEKTION---- */
-.cards {
+.artikler {
   display: flex;
-  flex-wrap: wrap;
-  gap: 80px;
-  justify-content: center;
-  padding: 20px;
+  flex-wrap: wrap; 
+  gap: 100px; /* Giver afstand mellem artiklerne */
+  justify-content: center; /* Centrerer artiklerne */
+  align-items: flex-start; /* Sørger for, at artiklerne starter ens */
   background-color: #232768;
 }
 
-.card {
+.artikel {
   flex: 1 1 300px;
   text-align: center;
   max-width: 320px;
@@ -153,23 +183,32 @@
   color: white;
 }
 
-.card img {
-  width: 120%;
-  height: auto;
+.artikel:hover {
+  transform: scale(1.05); /* Forstørrer artiklen lidt */
 }
 
-.card h3 {
+.artikel img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; /* Gør billedet glidende ved zoom */
+}
+
+.artikel:hover img {
+  transform: scale(1.1); /* Zoomer billedet lidt mere ved hover */
+}
+
+.artikel h3 {
   margin: 10px 0;
   font-size: 1.2rem;
 }
 
-.card p {
+.artikel p {
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 10px;
 }
 
-.card a {
+.artikel a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
@@ -178,13 +217,22 @@
 }
 
 /* Orange pynte linje */
-.cards::after {
+.artikler::after {
   content: "";
   position: absolute;
-  bottom: -425px;
+  bottom: -450px;
   left: 50%;
   transform: translateX(-50%);
   width: 300px;
   height: 10px;
   background-color: #b65c43; /* Dekorativ linje */
+}
+
+/* Gør "Læs mere" større */
+.read-more {
+  font-size: 1.5rem; /* Øger font-størrelsen */
+  font-weight: bold; /* Gør teksten fed for mere synlighed */
+  text-align: center; /* Sørg for, at teksten er centreret */
+  display: inline-block; /* Holder størrelsen konsekvent */
+  margin-top: 10px; /* Lidt luft ovenover */
 }
