@@ -8,25 +8,57 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  color: #fff;
+  line-height: 1.5;
   background-color: #2f2f2f;
 }
 
 /* ----HEADER SEKTION---- */
 .header-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  justify-content: space-between;
+  padding: 10px 20px;
+  height: auto;
+  position: relative;
+  z-index: 10;
   background-color: #2f2f2f;
 }
 
 /* ----LOGO SEKTION---- */
 .logo {
   height: 70px;
+  margin: 10px 20px; /* Giver lidt luft omkring logoet */
+  position: relative; /* Sørger for, at andre elementer ikke overlapper */
+  z-index: 10; /* Sørger for, at logoet forbliver øverst */
 }
 
-/* ----MENUBAR SEKTION---- */
+/* ----BURGER MENU SEKTION---- */
+.menu-toggle {
+  display: none; /* Skjuler checkbox som standard */
+}
+
+.hamburger-menu {
+  display: none; /* Skjul på store skærme */
+  cursor: pointer;
+  font-size: 2rem;
+  color: white;
+  z-index: 15; /* Sørger for, at knappen er øverst */
+}
+
+/* Når checkboxen er markeret */
+.menu-toggle:checked + .hamburger-menu + nav .nav-links {
+  display: flex; /* Viser menuen */
+  flex-direction: column;
+  background-color: #444; /* Baggrundsfarve for menu */
+  position: absolute;
+  top: 60px; /* Juster til din header-højde */
+  right: 0;
+  left: 0;
+  padding: 20px;
+  z-index: 10;
+}
+
+/* ----MENU NAVBAR SEKTION---- */
 .nav-links {
   list-style: none;
   display: flex;
@@ -173,7 +205,7 @@ body {
 }
 
 .nyhedsbrev-form button:hover {
-  background-color: #2f2f2f;/* Hover-effekt */
+  background-color: #232768;
 }
 
 /* Orange pynte streg */
@@ -244,17 +276,118 @@ body {
   vertical-align: middle; /* Juster lodret med tekst */
 }
 
-
-/* ----RESPONSIVT DESIGN SEKTION---- */
+/* ----RESPONSIVT DESIGN---- */
 @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column; /* Stabler sektionerne vertikalt */
-    text-align: center; /* Centrér tekst på mindre skærme */
-  }
+.header-container {
+  flex-direction: column;
+  align-items: center;
+}
 
-  .footer-info,
-  .footer-kontakt,
-  .footer-tider {
-    margin: 20px 0; /* Mere plads mellem sektioner */
-  }
+.logo {
+  margin-bottom: 10px;
+  right: 100px;
+    
+}
+.menu-toggle {
+  display: none; /* Sørg for, at check-box altid er skjult */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+}
+
+.hamburger-menu {
+  display: block; /* Vis hamburger-menu på små skærme */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 4;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-toggle:checked + .hamburger-menu + nav .nav-links {
+  display: flex; /* Vis menuen ved toggle */
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.nyhedsbrev-header h2 {
+  font-size: 1.6rem; /* Større overskrift */
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+
+.nyhedsbrev {
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.nyhedsbrev-container {
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.nyhedsbrev-container p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.nyhedsbrev-form {
+  width: 100%;
+  align-items: center;
+}
+
+.nyhedsbrev-form input {
+  width: 90%;
+}
+
+.nyhedsbrev-form button {
+  width: 50%;
+}
+
+.nyhedsbrev-decor-left,
+.nyhedsbrev-decor-right {
+  margin-top: 145px;
+}
+
+
+.footer-container {
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.footer-info, .footer-kontakt, .footer-tider {
+  flex: none;
+  width: 100%;
+}
+
+.footer-info :first-child{
+  font-weight: bold;
+}
+
+.footer-tider-grid {
+  display: flex;
+  justify-content: center; /* Centrerer kolonnerne */
+  gap: 40px; /* Afstand mellem de to kolonner */
+}
+
+.footer-tider-grid div {
+  text-align: left; /* Juster tekst til venstre i hver kolonne */
+}
+
+.footer-social-ikoner img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 30px;
+  margin-top: -30px;
+}
 }
