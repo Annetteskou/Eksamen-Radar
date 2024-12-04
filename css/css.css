@@ -11,78 +11,7 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  color: #fff;
-  background-color: #333;
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #1a1a1a;
-}
-
-.logo {
-  height: 50px;
-}
-
-/* Generel stil for navigation */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  padding: 0;
-  margin: 0;
-  background-color: #1a1a1a;
-}
-
-.nav-links > li {
-  position: relative;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  padding: 10px 15px;
-  display: block;
-}
-
-.nav-links a:hover {
-  background-color: #444;
-  border-radius: 5px;
-}
-
-/* Dropdown-menu */
-.dropdown {
-  list-style: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #222;
-  display: none; /* Skjuler dropdown som standard */
-  padding: 0;
-  margin: 0;
-  z-index: 1000;
-}
-
-.dropdown li {
-  width: 150px; /* Ens bredde til dropdown-elementer */
-}
-
-.dropdown a {
-  padding: 10px;
-}
-
-.nav-links li:hover .dropdown {
-  display: block; /* Viser dropdown, når musen er over */
-}
-
-
+/* Hero (store billede) sektion*/
 .hero {
   position: relative;
   background-image: url('../images/forside-hero.webp'); 
@@ -91,22 +20,22 @@ body {
   height: 400px; 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 
 .hero-content {
   background-color: rgba(230, 110, 81, 0.7); /* Halvgennemsigtig baggrund for tekst */
   padding: 20px 40px;
-  text-align: center;
+  margin-left: 5%;
 }
 
 .hero-content h1 {
-  color: #fff; /* Hvid tekstfarve */
-  font-size: 3rem; 
+  color: #fff; 
+  font-size: 2.5rem; 
   font-weight: bold;
 }
 
-/* Cards Section */
+/* Andre relevante artikler sektion */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -146,129 +75,4 @@ body {
   font-weight: bold;
   margin-top: 10px;
   display: inline-block;
-}
-
-/* Nyhedsbrevssektion */
-.newsletter {
-  background-color: #333; /* Baggrund for sektionen */
-  padding: 100px 0;
-  text-align: center;
-  position: relative;
-}
-
-/* Teksten over boksen */
-.newsletter-header h2 {
-  font-size: 2.8rem; /* Større overskrift */
-  color: #ffffff;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-/* Container for boksen */
-.newsletter-container {
-  background-color: #d27155; /* Baggrundsfarve for boksen */
-  padding: 40px;
-  max-width: 700px;
-  margin: 0 auto;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Blå dekorative firkanter */
-.newsletter-decor-left,
-.newsletter-decor-right {
-  position: absolute;
-  width: 100px; /* Gør dem længere */
-  height: 80px; /* Gør dem højere */
-  background-color: #3b5aa3;
-  margin-bottom: -20%;
-  
-}
-
-.newsletter-decor-left {
-  left: -100px; /* Placeret til venstre og i kontakt med boksen */
-}
-
-.newsletter-decor-right {
-  right: -100px; /* Placeret til højre og i kontakt med boksen */
-}
-
-/* Tekst i venstre side */
-.newsletter-container p {
-  font-size: 2rem; /* Større tekst */
-  font-weight: bold;
-  color: #ffffff;
-  margin: 0;
-  text-align: left; /* Venstrestillet tekst */
-  flex: 1;
-  line-height: 1.5; /* Bedre læsbarhed */
-}
-
-/* Formular - email og knap */
-.newsletter-form {
-  display: flex;
-  flex-direction: column; /* Lodret layout */
-  justify-content: center;
-  align-items: flex-end; /* Placeret til højre */
-  gap: 10px;
-  flex: 1;
-}
-
-.newsletter-form input {
-  width: 250px; /* Tilpas bredde */
-  padding: 12px;
-  border: 2px solid #333; /* Hvid kant for at matche mockup */
-  font-size: 1rem;
-  background-color: #f4f4f4; /* Lys baggrund */
-  color: #333; /* Tekstfarve */
-}
-
-.newsletter-form input::placeholder {
-  color: #999; /* Lysere tekst til placeholder */
-}
-
-.newsletter-form button {
-  width: 120px; /* Fast bredde for knappen */
-  padding: 12px 0;
-  background-color: white;
-  color: rgb(6, 6, 6);
-  font-size: 1rem;
-  font-weight: bold;
-  border: 2px solid #333;
-  cursor: pointer;
-  text-align: center;
-}
-
-.newsletter-form button:hover {
-  background-color: #555; /* Hover-effekt */
-}
-
-.newsletter::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 300px;
-  height: 20px;
-  background-color: #e46e5b; /* Dekorativ linje */
-}
-
-/* Footer Adjustments */
-.footer {
-  background-color: #000;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px;
-  color: #fff;
-  text-align: center;
-}
-
-.footer div {
-  flex: 1 1 auto;
-  margin: 10px;
 }
