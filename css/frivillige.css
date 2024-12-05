@@ -17,7 +17,7 @@
     padding: 30px 60px;
 }
 
-/* Sektion for Hvorfor og formular */
+/* ----HVORFOR TEKST OG FORM SEKTION---- */
 .frivillig-sektion {
     display: flex;
     justify-content: space-between; /* Placer tekst og formular ved siden af hinanden */
@@ -96,21 +96,195 @@
 }
 
 .frivillig-form button:hover {
-    background-color: #232768; /* Mørkere orange ved hover */
+    background-color: #232768; 
 }
+
+/* ----FÆLLESSKAB SEKTION---- */
+.faellesskab {
+    background-color: #2f2f2f; 
+    padding: 40px 20px; /* Luft foroven og forneden */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Vertikal opstilling */
+    position: relative;
+}
+
+
+.faellesskab-content {
+    max-width: 600px; 
+    background-color: #232768; 
+    z-index: 1; /* Sørg for, at teksten ligger øverst */
+    color: white;
+    padding: 20px 30px; /* Lidt ekstra luft omkring teksten */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); 
+    margin: 0 auto; /* Centrerer boksen */
+    position: relative; 
+}
+
+
+.faellesskab-content h3 {
+    font-size: 1.8rem; 
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.faellesskab-content p {
+    font-size: 1.2rem; 
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* Pynteelementer - Dekorative felter */
+.faellesskab::before {
+    content: ''; /* Pseudo-element */
+    position: absolute;
+    top: 25%; /* Start øverst */
+    left: 69%; /* Centrer firkanten horisontalt */
+    transform: translateX(-50%) translateY(-30%); 
+    width: 100px; 
+    height: 150px; 
+    background-color: #e76e51; 
+    z-index: 0; /* Sørg for, at det er bag teksten */
+}
+
+/* ----SLIDER SEKTION---- */
+/* Wrapper til slider */
+.slider-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden; /* Skjul indhold udenfor sliderens område */
+    position: relative;
+}
+
+/* Skjul radio-knapper */
+input[type="radio"] {
+    display: none;
+}
+
+/* Slider layout */
+.slider {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+/* Billeder i én linje */
+.slider-images {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 300%; /* Plads til 3 slides */
+}
+
+/* Individuelle slides */
+.slide {
+    flex: 0 0 33.333%; /* Hvert slide fylder 1/3 af bredden */
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Navigation med radio-knapper */
+#slide1:checked ~ .slider .slider-images {
+    transform: translateX(0%);
+}
+
+#slide2:checked ~ .slider .slider-images {
+    transform: translateX(-33.333%);
+}
+
+#slide3:checked ~ .slider .slider-images {
+    transform: translateX(-66.666%);
+}
+
+/* Navigation knapper (pile) */
+.slider-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.slider-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    pointer-events: all;
+    visibility: hidden; /* Skjuler pile som standard */
+}
+
+/* Vis relevante pile */
+#slide1:checked ~ .slider .slider-buttons label[for="slide3"],
+#slide1:checked ~ .slider .slider-buttons label[for="slide2"],
+#slide2:checked ~ .slider .slider-buttons label[for="slide1"],
+#slide2:checked ~ .slider .slider-buttons label[for="slide3"],
+#slide3:checked ~ .slider .slider-buttons label[for="slide2"],
+#slide3:checked ~ .slider .slider-buttons label[for="slide1"] {
+    visibility: visible;
+}
+
+
+
 
 
  /* ----TESTIMONIAL SEKTION---- */
-.testimonial {
-    text-align: center;
-    background-color: #e76e51;
-    font-style: italic;
-    border-radius: 50%; /* Gør billedet rundt */
+ .testimonial-container {
+    position: relative; 
+    text-align: center; /* Centrerer teksten */
+    padding: 100px 0; /* Giver lidt luft omkring containeren */
 }
 
-.testimonial cite {
+.testimonial-circle {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Sørger for, at cirklen er præcist centreret */
+    width: 400px;
+    height: 350px;
+    background-color: #e76e51;
+    border-radius: 50%;
+    z-index: -1; /* Sørger for, at teksten vises over cirklen */
+}
+
+blockquote h2 {
+    font-size: 10rem; 
+    margin-bottom: -100px;
+    margin-top: -80px;
+}
+
+
+blockquote {
+    position: relative;
+    z-index: 1; /* Sørger for, at teksten altid er over cirklen */
+    font-style: italic;
+    color: #ffffff; 
+    line-height: 1.4; /* Reducér linjehøjden for at få teksten til at passe */
+    font-size: 1.2rem; 
+    text-align: center; /* Centrer teksten inden i cirklen */
+    padding: 30px; 
+    max-width: 30%; /* Sørg for, at teksten ikke strækker sig for langt */
+    margin: 0 auto; 
+}
+
+blockquote cite {
     display: block;
+    margin-top: 20px; /* Skab afstand mellem citatet og forfatterens navn */
     font-weight: bold;
+    font-size: 1.3rem; 
 }
 
  /* ----MØD FRIVILLIGE SEKTION---- */
@@ -121,7 +295,7 @@
 }
   
 .mood-frivillige h2 {
-    font-size: 2rem; 
+    font-size: 2.5rem; 
     color: #ffffff; 
     font-weight: bold; 
 }
