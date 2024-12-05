@@ -1,9 +1,4 @@
 /* ----HERO (STOR BILLEDE) SEKTION----*/
-img {
-  max-width: 100%; /* Sørg for, at billeder aldrig overskrider containerens bredde */
-  height: auto; /* Bevar proportionerne */
-}
-
 .hero {
   position: relative;
   background-image: url('../images/forside-hero.webp'); 

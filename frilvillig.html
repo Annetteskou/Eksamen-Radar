@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radar - Unikke Lyde og Kreative Rum</title>
     <link rel="stylesheet" href="css/header-footer.css">
-    <link rel="stylesheet" href="css/forside.css">
+    <link rel="stylesheet" href="css/frivillige.css">
 </head>
 <body>
-
+    <!-- Header & Logo Sektion -->
     <header>
         <div class="header-container">
-            <a href="index.html">
+            <a href="forside.html">
                 <img src="images/logo.webp" alt="Radar Logo" class="logo">
             </a>
     
-            <!-- Hamburger-menu toggle -->
+            <!-- Hamburger-menu Toggle -->
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="hamburger-menu">☰</label>
     
-            <!-- Menu nagvigation start -->
+            <!-- Menu Nagvigation Start -->
             <nav>
                 <ul class="nav-links">
                     <li><a href="#">Om Radar</a>
@@ -41,7 +41,7 @@
                     <li><a href="#">Støt Radar</a>
                         <ul class="dropdown">
                             <li><a href="#">Donation</a></li>
-                            <li><a href="frilvillig.html">Bliv frivillig</a></li>
+                            <li><a href="#">Bliv frivillig</a></li>
                             <li><a href="#">Medlemskab og fordele</a></li>
                         </ul>
                     </li>
@@ -69,58 +69,88 @@
 <!-- Hero Sektion -->
 <section class="hero">
     <div class="hero-content">
-        <h1>Støt Unikke Lyde <br> og Kreative Rum</h1>
+        <h1>Blev frivillig</h1>
     </div>
 </section>
 
-<!-- Introduktion Sektion -->
-<section class="intro-section">
-    <div class="intro-container">
-        <!-- Tab-menu -->
-        <div class="intro-buttons">
-            <div class="intro-button velkommen">Velkommen til Radar</div>
-            <div class="intro-button kultur">Hvor Musik og Kultur Mødes</div>
+<!-- Sådan Bliver Du Frivillig -->
+<section class="frivillig-sektion">
+    <div class="hvorfor-bliv-frivillig">
+        <h2>Hvorfor blev frivillig</h2>
+        <p>Som frivillig hos Radar vil du få mulighed for at skabe nye venskaber og blive en del af familien. Du får lov til at være med til at skabe uforglemmelige koncert- og kulturoplevelser.</p>
+        <p>Ved at være frivillig hos Radar udvikler og styrker du dine kompetencer inden for arrangementer og kulturarbejde. Send din ansøgning i dag, og vær med til at gøre en forskel i Aarhus' musik- og kulturliv.</p>
+    
+           <!-- Sådan bliver du frivillig -->
+           <div class="saadan-bliv-frivillig">
+            <h2>Sådan bliver du frivillig</h2>
+            <p>Start med at udfylde formularen på denne side. Her kan du skrive lidt om dig selv, dine interesser og din baggrund. Vi kontakter dig, når vi har modtaget din ansøgning. Derefter vil du blive indkaldt til en samtale, hvor vi fortæller mere om de opgaver og muligheder, vi tilbyder. Når du er klar, vil du få en introduktion til vores fantastiske team og deltage i vores næste aktiviteter.</p>
         </div>
+    </div>
 
-        <!-- Content -->
-        <div class="intro-content">
-            <p>
-                Radar er hjertet af Aarhus' musikscene. Som et subkulturelt spillested arbejder vi på at fremme vækstlaget, 
-                eksperimenterende musik og kreative udtryk. Gennem vores events, workshops og støtteprogrammer har vi siden 2001 
-                været en platform for både etablerede kunstnere og nye talenter.
-            </p>
-        </div>
-
-        <!-- Baggrund billede -->
-        <div class="intro-image">
-            <img src="images/Forside-underbillede.webp" alt="Concert Image">
-        </div>
-         <!-- Vil du vide mere om Radar Sektion -->
-        <section class="more-about-radar">
-            <h2>Vil du vide mere om Radar?</h2>
-        </div>
+    <div class="frivillig-form-container">
+        <form class="frivillig-form">
+            <label for="navn">Navn</label>
+            <input type="text" id="navn" placeholder="Indtast dit navn">
+            
+            <label for="efternavn">Efternavn</label>
+            <input type="text" id="efternavn" placeholder="Indtast dit efternavn">
+            
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="Indtast din e-mail">
+            
+            <label for="telefon">Telefon</label>
+            <input type="tel" id="telefon" placeholder="Indtast dit telefonnummer">
+            
+            <label for="interesser">Evt. baggrund og interesser</label>
+            <textarea id="interesser" placeholder="Fortæl os lidt om dig selv"></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
     </div>
 </section>
 
-<!-- Relevante Artikler Sektion -->
-<section class="artikler">
-    <div class="artikel">
-        <img src="images/Billede til call-to-action.webp" alt="What Makes Radar Special">
-        <h3>Hvad gør Radar specielt?</h3>
-        <p>Radar står over for en udfordrende fremtid...</p>
-        <a href="#" class="read-more">Læs mere</a>
+<!-- Det Særlige Fælleskab Sektion -->
+<section class="faellesskab">
+        <h3>Det særlige fællesskab</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis ipsum suspendisse ultrices gravida.</p>
     </div>
-    <div class="artikel">
-        <img src="images/blev-frillige.webp" alt="Volunteer">
-        <h3>Bliv Frivillig – Gør en forskel!</h3>
-        <p>Radar står over for en udfordrende fremtid...</p>
-        <a href="#" class="read-more">Læs mere</a>
+</section>
+
+<!-- Testimonial Sektion -->
+<section class="testimonial">
+    <blockquote>
+        <p>“Radar er lykken og fællesskabet. <br> Jeg kommer for at hygge – det bringer mig lykke. <br>  Jeg har været frivillig i 20 år, <br>  og det giver mig smil, venner og fantastiske oplevelser.”</p>
+        <cite>– Henrik, Frivillig</cite>
+    </blockquote>
+</section>
+
+ <!-- Mød frivilllige -->
+ <section class="mood-frivillige">
+    <h2>Mød frivillige</h2>
     </div>
-    <div class="artikel">
-        <img src="images/støt-call-to-action.webp" alt="Support">
-        <h3>Din støtte gør en forskel</h3>
-        <p>Radar står over for en udfordrende fremtid...</p>
-        <a href="#" class="read-more">Læs mere</a>
+</div>
+</section>
+
+<!-- Mød Frivillige Artikeler -->
+    <section class="frivillige-container">
+        <div class="frivillig">
+            <img src="images/sofie.webp" alt="Sofie">
+            <h3>Sofie</h3>
+            <p>En passion for musik og mennesker</p>
+            <a href="#" class="laas-mere">Læs mere</a>
+        </div>
+        <div class="frivillig">
+            <img src="images/jonas.webp" alt="Jonas">
+            <h3>Jonas</h3>
+            <p>Bag baren og bag kulisserne</p>
+            <a href="#" class="laas-mere">Læs mere</a>
+        </div>
+        <div class="frivillig">
+            <img src="images/anna.webp" alt="Anna">
+            <h3>Anna</h3>
+            <p>Skaber af fællesskab</p>
+            <a href="#" class="laas-mere">Læs mere</a>
+        </div>
     </div>
 </section>
 

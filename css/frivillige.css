@@ -1,0 +1,190 @@
+/* ----HERO (STOR BILLEDE) SEKTION----*/
+/* Hero Sektion */
+.hero {
+    background-image: url('../images/frivillig-hero.webp');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: white;
+    background-color: rgba(230, 110, 81, 0.7);
+    padding: 30px 60px;
+}
+
+/* Sektion for Hvorfor og formular */
+.frivillig-sektion {
+    display: flex;
+    justify-content: space-between; /* Placer tekst og formular ved siden af hinanden */
+    align-items: flex-start; 
+    gap: 50px; /* Giv mere plads mellem tekst og formular */
+    padding: 40px 10%; 
+    background-color: #2f2f2f; 
+}
+
+/* Tekstsektion */
+.hvorfor-bliv-frivillig {
+    flex: 1;
+    max-width: 55%; /* Teksten fylder 55% af layoutet */
+    line-height: 1.8;
+}
+
+.hvorfor-bliv-frivillig h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hvorfor-bliv-frivillig p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ffffff; 
+}
+
+/* Formularsektion */
+.frivillig-form-container {
+    flex: 1;
+    max-width: 45%; 
+    background-color: #1c1c1c;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Let skygge */
+}
+
+/* Formular-indhold */
+.frivillig-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.frivillig-form input,
+.frivillig-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 2px solid #444;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #2f2f2f;
+    color: white;
+}
+
+.frivillig-form textarea {
+    height: 100px; /* Gør tekstfeltet større */
+}
+
+.frivillig-form button {
+    width: 100%;
+    background-color: #e76e51; /* Orange knap */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.frivillig-form button:hover {
+    background-color: #232768; /* Mørkere orange ved hover */
+}
+
+
+ /* ----TESTIMONIAL SEKTION---- */
+.testimonial {
+    text-align: center;
+    background-color: #e76e51;
+    font-style: italic;
+    border-radius: 50%; /* Gør billedet rundt */
+}
+
+.testimonial cite {
+    display: block;
+    font-weight: bold;
+}
+
+ /* ----MØD FRIVILLIGE SEKTION---- */
+.mood-frivillige {
+    text-align: center;
+    margin-top: 20px; 
+    margin-bottom: 10px;
+}
+  
+.mood-frivillige h2 {
+    font-size: 2rem; 
+    color: #ffffff; 
+    font-weight: bold; 
+}
+
+  /* ----MØD FRIVILLIGE ARTIKLER SEKTION---- */
+  .frivillige-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 100px; /* Giver afstand mellem artiklerne */
+    justify-content: center; /* Centrerer artiklerne */
+    align-items: flex-start; /* Sørger for, at artiklerne starter ens */
+    background-color: #232768;
+  }
+  
+  .frivillig {
+    flex: 1 1 300px;
+    text-align: center;
+    max-width: 320px;
+    padding: 20px;
+    color: white;
+  }
+  
+  .frivillig:hover {
+    transform: scale(1.05); /* Forstørrer artiklen lidt */
+  }
+  
+  /* Artikel billeder */
+  .frivillig img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Gør billedet glidende ved zoom */
+  }
+  
+  .frivillig:hover img {
+    transform: scale(1.1); /* Zoomer billedet lidt mere ved hover */
+  }
+  
+  /* Artikel overskift under billederne */
+  .frivillig h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+  
+  /* Artikel brødtekst under billederne */
+  .frivillig p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  .frivillig a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  /* Gør "Læs mere" større */
+  .laas-mere {
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    text-align: center; 
+    display: inline-block; /* Holder størrelsen konsekvent */
+    margin-top: 10px; /* Lidt luft ovenover */
+  }

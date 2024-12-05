@@ -1,3 +1,4 @@
+/* ----DENNE CSS HAR ALT DET MED HEADER,BODY,LOGO,MENU,NYHEDESBREV OG FOOTER AT GØRE---- */
 * {
   margin: 0;
   padding: 0;
@@ -252,6 +253,10 @@ body {
   flex: 1 1 300px; /* Hver sektion tager lige meget plads */
   text-align: center; 
   font-size: 1.2rem; 
+}
+
+.footer-info :first-child{
+font-weight: bold;
 }
 
 .footer-info p,
