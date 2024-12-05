@@ -28,8 +28,7 @@ body {
 .logo {
   height: 70px;
   margin: 10px 20px; /* Giver lidt luft omkring logoet */
-  position: relative; /* Sørger for, at andre elementer ikke overlapper */
-  z-index: 10; /* Sørger for, at logoet forbliver øverst */
+  position: relative; 
 }
 
 /* ----BURGER MENU SEKTION---- */
@@ -278,16 +277,20 @@ body {
 
 /* ----RESPONSIVT TIL IPHONE---- */
 @media (max-width: 768px) {
+
+/* Header sektion */
 .header-container {
   flex-direction: column;
   align-items: center;
 }
 
+/* Logo sektion */
 .logo {
   margin-bottom: 10px;
   right: 100px;
-    
 }
+
+/* Menu sektion */
 .menu-toggle {
   display: none; /* Sørg for, at check-box altid er skjult */
   position: absolute;
@@ -332,6 +335,7 @@ body {
   text-align: center;
 }
 
+/* Nyhedsbrev sektion */
 .nyhedsbrev-header h2 {
   font-size: 1.6rem; /* Større overskrift */
   margin-top: 40px;
@@ -375,7 +379,7 @@ body {
   margin-top: 145px;
 }
 
-
+/* Footer sektion */
 .footer-container {
   flex-direction: column;
   gap: 10px;
@@ -410,16 +414,19 @@ body {
 /* ----RESPONSIVT TIL IPAD---- */
 @media (min-width: 768px) and (max-width: 1024px) {
 
+  /* Header sektion */
   .header-container {
     flex-direction: column;
     align-items: center;
   }
   
+  /* Logo sektion */
   .logo {
-    width: 100%;
     margin-bottom: 10px;
-    right: 400px;
+    right: 310px;
   }
+
+  /* Menu sektion */
   .menu-toggle {
     display: none; /* Sørg for, at check-box altid er skjult */
     position: absolute;
@@ -464,6 +471,15 @@ body {
     padding: 30px;
   }
 
+  /* Nyhedsbrev sektion */
+  .nyhedsbrev {
+    margin-bottom: 60px;
+  }
+
+  .nyhedsbrev-header h2 {
+    margin-top: 60px;
+  }
+
   .nyhedsbrev-container p {
     text-align: center;
     font-size: 2.2rem;
@@ -476,7 +492,7 @@ body {
   }
   
   .nyhedsbrev-form input {
-    width: 110%;
+    width: 100%;
     height: 65px;
   }
   
@@ -485,6 +501,11 @@ body {
     height: 60px;
   }
 
+  .nyhedsbrev-decor-left,.nyhedsbrev-decor-right {
+    margin-top: 255px;
+  }
+
+  /* Footer sektion */
   .footer-container {
     flex-direction: column;
     gap: 10px;
@@ -520,4 +541,45 @@ body {
     margin-bottom: 30px;
     margin-top: -30px;
   }
+  }
+
+  @media (max-width: 1200px) {
+    /* Header sektion */
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+     /* Logo sektion*/
+    .logo {
+        height: 60px; /* Reducer logoets størrelse */
+    }
+
+    /* Menu sektion */
+    .nav-links {
+      flex-direction: row; /* Bevar vandret navigation */
+      gap: 10px;
+    }
+
+     /* Nyhedsbrev sektion */
+     .nyhedsbrev {
+      padding: 30px;
+    }
+
+    .nyhedsbrev-container {
+      flex-direction: column; /* Stak indhold lodret */
+      gap: 15px;
+    }
+
+    .nyhedsbrev-form {
+      width: 100%; /* Formularen fylder hele bredden */
+    }
+
+      /* Footer sektion */
+    .footer-container {
+      flex-direction: column; /* Stak footer-sektioner lodret */
+      gap: 20px;
+      text-align: center;
+    }
   }
