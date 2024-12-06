@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radar</title>
     <link rel="stylesheet" href="css/header-footer.css">
-    <link rel="stylesheet" href="css/forside.css">
+    <link rel="stylesheet" href="css/donation.css">
 </head>
 <body>
-
+    <!-- Header & Logo Sektion -->
     <header>
         <div class="header-container">
-            <a href="index.html">
+            <a href="forside.html">
                 <img src="images/logo.webp" alt="Radar Logo" class="logo">
             </a>
     
-            <!-- Hamburger-menu toggle -->
+            <!-- Hamburger-menu Toggle -->
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="hamburger-menu">☰</label>
     
-            <!-- Menu nagvigation start -->
+            <!-- Menu Nagvigation Start -->
             <nav>
                 <ul class="nav-links">
                     <li><a href="#">Om Radar</a>
@@ -40,7 +40,7 @@
                     </li>
                     <li><a href="#">Støt Radar</a>
                         <ul class="dropdown">
-                            <li><a href="donation.html">Donation</a></li>
+                            <li><a href="#">Donation</a></li>
                             <li><a href="frilvillig.html">Bliv frivillig</a></li>
                             <li><a href="#">Medlemskab og fordele</a></li>
                         </ul>
@@ -66,62 +66,91 @@
         </div>
     </header>
 
-<!-- Hero Sektion -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Støt Unikke Lyde <br> og Kreative Rum</h1>
+ <!-- Hero og Donation Sektion -->
+ <section class="hero">
+    <h1>DIN STØTTE ER VIGTIGT</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="donation-box">
+        <h2>Dit bidrag gør en forskel</h2>
+        <form>
+            <div>
+                <input type="radio" id="engang" name="donation-type" value="engang" checked>
+                <label for="engang">Enkelt donation</label>
+            </div>
+            <div>
+                <input type="radio" id="fast" name="donation-type" value="fast">
+                <label for="fast">Støt fast</label>
+            </div>
+            <div class="amount">
+                <button type="button">50 kr.</button>
+                <button type="button">150 kr.</button>
+                <button type="button">200 kr.</button>
+                <input type="text" placeholder="Valgfrit beløb">
+            </div>
+            <button class="donate-btn">STØT NU</button>
+        </form>
+        <p class="mobilepay">STØT MED MOBILEPAY 123435</p>
+     </div>
     </div>
 </section>
 
-<!-- Introduktion Sektion -->
-<section class="intro-section">
-    <div class="intro-container">
-        <!-- Tab-menu -->
-        <div class="intro-buttons">
-            <div class="intro-button velkommen">Velkommen til Radar</div>
-            <div class="intro-button kultur">Hvor Musik og Kultur Mødes</div>
-        </div>
+<section class="impact">
+    <h2>Hvad forskellige donationsbeløb kan gøre for Radar</h2>
+    <img src="images/ donations kan gøre for Radar.webp" alt="Hvad forskellige donationsbeløb kan gøre for Radar">
+</section>
 
-        <!-- Content -->
-        <div class="intro-content">
-            <p>
-                Radar er hjertet af Aarhus' musikscene. Som et subkulturelt spillested arbejder vi på at fremme vækstlaget, 
-                eksperimenterende musik og kreative udtryk. Gennem vores events, workshops og støtteprogrammer har vi siden 2001 
-                været en platform for både etablerede kunstnere og nye talenter.
-            </p>
-        </div>
-
-        <!-- Baggrund billede -->
-        <div class="intro-image">
-            <img src="images/Forside-underbillede.webp" alt="Concert Image">
-        </div>
-
-        <!-- Vil du vide mere om Radar Sektion -->
-<section class="more-about-radar">
-            <h2>Vil du vide mere om Radar?</h2>
-        </div>
+<section class="testimonials">
+    <h2>Udtalelser fra kunstnere og publikum</h2>
+    <div class="testimonial">
+        <blockquote>"Radar har hjulpet mig med at optræde foran et bredt publikum."</blockquote>
+        <p>- Andreas, musiker</p>
+    </div>
+    <div class="testimonial">
+        <blockquote>"Radar er en fantastisk scene for både kunstnere og publikum."</blockquote>
+        <p>- Annika, kunstner</p>
+    </div>
+    <div class="testimonial">
+        <blockquote>"Jeg fik mit første gennembrud takket være Radar."</blockquote>
+        <p>- Jonas, sanger</p>
     </div>
 </section>
 
-<!-- Relevante Artikler Sektion -->
-<section class="artikler">
-    <div class="artikel">
-        <img src="images/Billede til call-to-action.webp" alt="What Makes Radar Special">
-        <h3>Hvad gør Radar specielt?</h3>
-        <p>Radar står over for en udfordrende fremtid...</p>
-        <a href="#" class="read-more">Læs mere</a>
+<section class="gallery">
+    <h2>Sammen skaber vi minder</h2>
+    <div class="images">
+        <img src="images/del-dinminder1.webp" alt="Koncertbillede 1">
+        <img src="images/del-dinminder2.webp" alt="Koncertbillede 2">
+        <img src="images/del-dinminder3.webp" alt="Koncertbillede 3">
     </div>
-    <div class="artikel">
-        <img src="images/blev-frillige.webp" alt="Frivillig">
-        <h3>Bliv Frivillig – Gør en forskel!</h3>
-        <p>Radar står over for en udfordrende fremtid...</p>
-        <a href="frilvillig.html" class="read-more">Læs mere</a>
+</section>
+
+ <!-- Vil du vide mere om Radar Sektion -->
+ <section class="mood-frivillige">
+    <h2>Vil du gerne vide mere?</h2>
     </div>
-    <div class="artikel">
-        <img src="images/støt-call-to-action.webp" alt="Support">
-        <h3>Din støtte gør en forskel</h3>
-        <p>Radar står over for en udfordrende fremtid...</p>
-        <a href="donation.html" class="read-more">Læs mere</a>
+</div>
+</section>
+
+<!-- Vil du vide mere om Radar artikle Sektion -->
+    <section class="frivillige-container">
+        <div class="frivillig">
+            <h3>Hvad gør Radar specielt?</h3>
+            <img src="images/Billede til call-to-action.webp" alt="What Makes Radar Special">
+            <p>Radar står over for en udfordrende fremtid...</p>
+            <a class="laas-mere" href="#">Læs mere</a>
+        </div>
+        <div class="frivillig">
+            <h3>Sådan bliver du frivillig!</h3>
+            <img src="images/blev-frillige.webp" alt="Frivillig">
+            <p>Vil du være med til at skabe unikke koncertoplevelser og...</p>
+            <a class="laas-mere" href="frilvillig.html">Læs mere</a>
+        </div>
+        <div class="frivillig">
+            <h3>Medlemskab og fordele</h3>
+            <img src="images/medlemskab.webp" alt="Medlemskab">
+            <p>Bliv medlem og få adgang til eksklusive goder og...</p>
+            <a class="laas-mere" href="#">Læs mere</a>
+        </div>
     </div>
 </section>
 
