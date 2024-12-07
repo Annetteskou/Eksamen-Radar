@@ -1,67 +1,159 @@
 /* ----HERO (STOR BILLEDE) SEKTION----*/
 .hero {
+    position: relative;
+    height: 80vh; /* Hero-sektionen fylder 80% af skærmen */
     background: url('../images/støt-radar-hero.webp') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
-    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-.hero-content {
+ /* ----DONATIONSBOKS SEKTION---- */
+.donation-box {
+    position: absolute;
+    right: 10%; /* Beholder placeringen mod højre */
+    top: 100px;
+    bottom: -70px; /* Overlapper hero-sektionen */
+    background:#232768;
+    color: #fff;
+    padding: 35px 30px; /* Mere plads indeni boksen */
+    text-align: center;
+    width: 400px; /* Gør boksen bredere */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Lidt stærkere skygge */
+    z-index: 10;
+}
+
+.donation-box h2 {
+    font-size: 27px; 
+    margin-bottom: 10px;
+    margin-top: -15px;
+}
+
+.donation-box label {
+    display: block;
+    margin: 12px 0;
+    font-size: 16px; 
+    text-align: left;
+}
+
+/* Penge */
+.penge {
+    display: flex;
+    gap: 15px; /* Mere afstand mellem knapperne */
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.penge button {
+    background: #fff;
+    border: none;
+    color: #000000;
+    font-size: 22px; 
+    font-weight: bold;
+    width: 100px;
+    height: 50px; 
+    cursor: pointer;
+}
+
+.penge button:hover {
+    background: #b65c43;
+}
+
+/*Donation input boks  */
+.donation-box input[type="text"] {
+    width: 100%;
+    padding: 15px; /* Mere plads i input-feltet */
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    font-size: 16px; 
+    text-align: center;
+}
+
+/*Donation knap */
+button.donate-btn {
+    background: #b65c43;
+    color: #fff;
+    font-size: 30px; 
+    font-weight: bold;
+    padding: 15px; /* Øg polstringen */
+    margin: 25px 0;
+    border: none;
+    width: 100%;
+}
+
+button.donate-btn:hover {
+    background: #8e4515;
+}
+
+/* Mobilpay */
+.mobilepay {
+    font-size: 20px; /* Større tekst til MobilePay sektionen */
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+ /* ----RADIO-KNAPPERNE SEKTION---- */
+.donation-muligheder {
+    display: flex; /* Placerer elementerne side om side */
+    justify-content: center; /* Centrerer dem vandret */
+    align-items: center; /* Justerer dem lodret */
+    gap: 30px; /* Giver afstand mellem de to elementer */
+    margin-bottom: 20px; /* Lidt afstand under valgmulighederne */
+}
+
+.donation-muligheder label {
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Justerer radioknap og tekst lodret */
+    gap: 8px; /* Afstand mellem radioknap og tekst */
+}
+
+.donation-muligheder input[type="radio"] {
+    accent-color: #f36c21; /* Radioknappens farve */
+}
+
+ /* ----TEKST UNDER HERO SEKTION---- */
+.hero-text {
+    padding: 50px 20px;
+    text-align: center;
+    background: #2f2f2f; 
+    color: #fff; 
+    margin-top: 30px; /* Skaber afstand fra hero-sektionen */
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero-text p {
+    font-size: 16px;
+    line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
 }
 
-.hero .donation-box {
-    background: #1d1d78;
-    color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: left;
-    max-width: 350px;
-    margin: 20px auto;
-}
 
-.hero .donation-box h2 {
-    font-size: 18px;
-}
-
-.hero .donation-box form {
-    margin-top: 15px;
-}
-
-.hero .donation-box .amount button {
-    background: #f36c21;
-    border: none;
-    color: #fff;
-    padding: 10px;
-    margin-right: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.hero .donation-box .amount button:hover {
-    background: #d1551a;
-}
-
-.hero .donation-box .mobilepay {
-    text-align: center;
-    margin-top: 15px;
-    font-weight: bold;
-}
-
-/* Impact-sektion */
+ /* ----IMPACT SEKTION---- */
 .impact {
-    padding: 30px 20px;
     text-align: center;
+    padding: 40px 20px;
+    background: #f4f4f4; 
 }
 
 .impact img {
     max-width: 100%;
     height: auto;
-    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-/* Testimonials */
+ /* ----TESTIMORIALS SEKTION---- */
 .testimonials {
     background: #f9f9f9;
     padding: 30px 20px;
@@ -73,7 +165,7 @@
     font-style: italic;
 }
 
-/* Galleri */
+ /* ----GALLERI SEKTION---- */
 .gallery {
     padding: 30px 20px;
     text-align: center;

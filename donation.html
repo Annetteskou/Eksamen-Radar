@@ -15,11 +15,11 @@
                 <img src="images/logo.webp" alt="Radar Logo" class="logo">
             </a>
     
-            <!-- Hamburger-menu Toggle -->
+            <!-- Hamburger-menu Toggle Sektion -->
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="hamburger-menu">☰</label>
     
-            <!-- Menu Nagvigation Start -->
+            <!-- Menu Nagvigation Start Sektion -->
             <nav>
                 <ul class="nav-links">
                     <li><a href="#">Om Radar</a>
@@ -68,37 +68,43 @@
 
  <!-- Hero og Donation Sektion -->
  <section class="hero">
-    <h1>DIN STØTTE ER VIGTIGT</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     <div class="donation-box">
         <h2>Dit bidrag gør en forskel</h2>
-        <form>
-            <div>
-                <input type="radio" id="engang" name="donation-type" value="engang" checked>
-                <label for="engang">Enkelt donation</label>
-            </div>
-            <div>
-                <input type="radio" id="fast" name="donation-type" value="fast">
-                <label for="fast">Støt fast</label>
-            </div>
-            <div class="amount">
-                <button type="button">50 kr.</button>
-                <button type="button">150 kr.</button>
-                <button type="button">200 kr.</button>
-                <input type="text" placeholder="Valgfrit beløb">
-            </div>
-            <button class="donate-btn">STØT NU</button>
-        </form>
-        <p class="mobilepay">STØT MED MOBILEPAY 123435</p>
-     </div>
+        <div class="donation-muligheder">
+            <label>
+                <input type="radio" name="donation-type" value="engang" checked> Enkelt donation
+            </label>
+            <label>
+                <input type="radio" name="donation-type" value="fast"> Støt fast
+            </label>
+        </div>
+        <div class="penge">
+            <button>50 kr.</button>
+            <button>150 kr.</button>
+            <button>200 kr.</button>
+        </div>
+        <input type="text" placeholder="Valgfrit beløb">
+        <button class="donate-btn">STØT NU</button>
+        <div class="mobilepay">
+            <img src="images/mobilpay.webp" alt="MobilePay">
+            <p>STØT MED MOBILEPAY <br>123435</p>
+        </div>
     </div>
 </section>
 
+<!-- Teksten efter hero Sektion-->
+<section class="hero-text">
+    <h1>DIN STØTTE ER VIGTIGT</h1>
+    <p>Vi har brug for din hjælp til at bevare Radar, som holder Aarhus’ musik liv igang. Med din støtte, kan vi gøre det muligt for os at arrangere flere fede koncerter, støtte nye talenter og skabe et stærkt fællesskab omkring musikken! Sammen kan vi gøre en forskel!</p>
+</section>
+
+<!-- Infograpfic Sektion -->
 <section class="impact">
     <h2>Hvad forskellige donationsbeløb kan gøre for Radar</h2>
     <img src="images/ donations kan gøre for Radar.webp" alt="Hvad forskellige donationsbeløb kan gøre for Radar">
 </section>
 
+<!-- Testimonials Sektion -->
 <section class="testimonials">
     <h2>Udtalelser fra kunstnere og publikum</h2>
     <div class="testimonial">
@@ -115,6 +121,7 @@
     </div>
 </section>
 
+<!-- Galleri Sektion -->
 <section class="gallery">
     <h2>Sammen skaber vi minder</h2>
     <div class="images">
