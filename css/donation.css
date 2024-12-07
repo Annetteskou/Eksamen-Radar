@@ -115,42 +115,43 @@ button.donate-btn:hover {
     accent-color: #f36c21; /* Radioknappens farve */
 }
 
- /* ----TEKST UNDER HERO SEKTION---- */
-.hero-text {
-    padding: 50px 20px;
-    text-align: center;
-    background: #2f2f2f; 
-    color: #fff; 
-    margin-top: 30px; /* Skaber afstand fra hero-sektionen */
+ /* ----DIN STØTTE ER VIGTIGT TEKST SEKTION---- */
+.support-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 20px;
+    gap: 20px; /* Juster afstanden mellem tekst og infografik */
 }
 
-.hero-text h1 {
+.support-text {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+    color: #fff;
+}
+
+.support-text h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    font-weight: bold;
-    letter-spacing: 1px;
 }
 
-.hero-text p {
+.support-text p {
     font-size: 16px;
     line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
 }
 
-
- /* ----IMPACT SEKTION---- */
-.impact {
-    text-align: center;
-    padding: 40px 20px;
-    background: #f4f4f4; 
+ /* ----INFOGRAPHIC SEKTION---- */
+.infographic {
+    flex: 1;
+    max-width: 500px;
 }
 
-.impact img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+.infographic img {
+    width: 100%;
+    border-radius: 10px; /* Giver en lille afrunding på kanterne */
 }
 
  /* ----TESTIMORIALS SEKTION---- */
