@@ -116,84 +116,268 @@ button.donate-btn:hover {
 }
 
  /* ----DIN STØTTE ER VIGTIGT TEKST SEKTION---- */
-.support-section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    margin: 50px auto;
+.section-container {
     max-width: 1200px;
-    padding: 20px;
-    gap: 20px; /* Juster afstanden mellem tekst og infografik */
-}
-
-.support-text {
-    flex: 1;
-    max-width: 600px;
-    text-align: left;
+    margin: 0 auto;
+    padding: 40px 20px;
     color: #fff;
 }
 
-.support-text h2 {
-    font-size: 36px;
+/* "Din støtte er vigtigt" */
+.radar-stootte {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.radar-stootte h2 {
+    font-size: 2rem;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
-.support-text p {
-    font-size: 16px;
-    line-height: 1.6;
+.radar-stootte p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
 
- /* ----INFOGRAPHIC SEKTION---- */
-.infographic {
-    flex: 1;
-    max-width: 500px;
-}
-
-.infographic img {
-    width: 100%;
-    border-radius: 10px; /* Giver en lille afrunding på kanterne */
-}
-
- /* ----TESTIMORIALS SEKTION---- */
-.testimonials {
-    background: #f9f9f9;
-    padding: 30px 20px;
-    text-align: center;
-}
-
-.testimonials .testimonial {
-    margin: 20px 0;
-    font-style: italic;
-}
-
- /* ----GALLERI SEKTION---- */
-.gallery {
-    padding: 30px 20px;
-    text-align: center;
-}
-
-.gallery .images {
+/* Tekstindhold */
+.content-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.gallery .images img {
-    max-width: 100%;
-    border-radius: 8px;
+/* ----INFOGRAFIK SEKTION---- */
+.infographic-content {
+    flex: 1;
+    text-align: center;
+}
+
+.infographic-content img {
+    max-width: 80%;
+    height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* ----HVER EN KRONE TÆLLER & HVAD KAN RADAR SEKTION---- */
+/* Tekstkolonner */
+.text-columns {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
 
- /* ----MØD FRIVILLIGE SEKTION---- */
-.mood-frivillige {
+/* Teksterne*/
+.donation-stootte,
+.hvad-kan-radar {
+    text-align: left;
+}
+
+.donation-stootte h2,
+.hvad-kan-radar h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.donation-stootte p,
+.hvad-kan-radar ul {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.donation-stootte ul,
+.hvad-kan-radar ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.donation-stootte ul li,
+.hvad-kan-radar ul li {
+    margin-bottom: 10px;
+}
+
+/* ----TESTIMORIALS SEKTION---- */
+.testimonials {
+    background-color: #2f2f2f;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0; 
+    color: white;
+    background-color: #b65c43; 
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.blue-box {
+    width: 300px; 
+    height: 50px; /* Højden på den blå boks */
+    background-color: #232768; 
+    margin-top: -33px; /* Sørg for, at boksen rykker tæt på den orange boks */
+    margin-left: 755px;
+    margin-bottom: 50px;
+}
+
+/* Testimonial Container */
+.testimonials-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+/* Testimonial Hvide Bokse */
+.testimonial {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-radius: 5px;
+}
+
+/* Billede Styling */
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #b65c43;
+    margin: 0 20px; /* Plads mellem billedet og teksten */
+}
+
+/* Testimonial Indhold */
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.testimonial-content blockquote {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* Navne Styling */
+.testimonial-content p {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Zigzag-positionering */
+.zigzag-venstre {
+    align-self: flex-start;
+    margin-left: 0;
+    text-align: left; /* Tilpasser tekstens retning */
+    display: flex;
+    flex-direction: row; /* Billede til venstre, tekst til højre */
+}
+
+.zigzag-hoojre {
+    align-self: flex-end;
+    margin-right: 0;
+    text-align: right; /* Tilpasser tekstens retning */
+    display: flex;
+    flex-direction: row-reverse; /* Billede til højre, tekst til venstre */
+}
+
+/* ----MINDER-GALLERI SEKTION---- */
+/* Sektionens styling */
+.memories-section {
+    background-color: #2f2f2f;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Overskriftens styling */
+.memories-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    color: white;
+    background-color: #232768; /* Blå baggrund */
+    padding: 10px 20px;
+}
+
+.memories-section h2::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -40px; /* Juster orange barens placering */
+    width: 30px;
+    height: 10px;
+    background-color: #b65c43; /* Orange farve */
+    transform: translateY(-50%);
+}
+
+/* Galleriets layout */
+.memories-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 billeder pr. række */
+    gap: 20px;
+}
+
+.memories-gallery img {
+    width: 100%; /* Gør billederne fleksible til containeren */
+    height: 250px; /* Ensartet højde for alle billeder */
+    object-fit: cover; /* Beskær billedet til at passe inden for boksen uden deformation */
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease; 
+}
+
+.memories-gallery img:hover {
+    transform: scale(1.05); /* Lidt forstørrelse på hover */
+}
+
+
+/* Call-to-action knap */
+.share-memories {
+    display: inline-block;
+    margin-top: 20px;
+    color: white;
+    background-color: #232768;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.share-memories:hover {
+    background-color: #b65c43; /* Orange hover-effekt */
+}
+
+
+ /* ----VIL DU VIDE MERE SEKTION---- */
+.vil-du-vide-mere {
     text-align: center;
     margin-top: 20px; 
     margin-bottom: 10px;
 }
   
-.mood-frivillige h2 {
+.vil-du-vide-mere h3 {
     font-size: 2.5rem; 
     color: #ffffff; 
     font-weight: bold; 
