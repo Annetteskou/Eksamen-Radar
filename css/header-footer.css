@@ -10,7 +10,7 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   line-height: 1.5;
-  background-color: #2f2f2f;
+  background-color: #191818;
 }
 
 /* ----HEADER SEKTION---- */
@@ -22,7 +22,7 @@ body {
   height: auto;
   position: relative;
   z-index: 10;
-  background-color: #2f2f2f;
+  background-color: #191818;
 }
 
 /* ----LOGO SEKTION---- */
@@ -30,6 +30,7 @@ body {
   height: 70px;
   margin: 10px 20px; /* Giver lidt luft omkring logoet */
   position: relative; 
+  box-shadow: 0 6px 12px rgba(226, 211, 211, 0.6); /* Lys */
 }
 
 /* ----BURGER MENU SEKTION---- */
@@ -65,7 +66,7 @@ body {
   gap: 30px;
   padding: 0;
   margin: 0;
-  background-color: #2f2f2f;
+  background-color: #191818;
   z-index: 15; /* Sørg for, at dropdown-menu også vises */
   position: relative;
 }
@@ -92,7 +93,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #222020;
+  background-color: #2f2f2f;
   display: none; /* Skjuler dropdown som standard */
   padding: 0;
   margin: 0;
@@ -113,7 +114,7 @@ body {
 
   /* ----NYHEDSBREV SEKTION---- */
 .nyhedsbrev {
-  background-color: #2f2f2f;/* Baggrund for sektionen */
+  background-color: #191818;/* Baggrund for sektionen */
   padding: 100px 0;
   text-align: center;
   position: relative;
@@ -184,7 +185,7 @@ body {
 .nyhedsbrev-form input {
   width: 250px; 
   padding: 12px;
-  border: 2px solid #2f2f2f; /* Sort kant */
+  border: 2px solid #191818; /* Sort kant */
   font-size: 1rem;
   background-color: #f4f4f4; 
   color: #2f2f2f;
@@ -201,7 +202,7 @@ body {
   color: rgb(6, 6, 6);
   font-size: 1rem;
   font-weight: bold;
-  border: 2px solid #2f2f2f;
+  border: 2px solid #191818;
   cursor: pointer;
   text-align: center;
 }

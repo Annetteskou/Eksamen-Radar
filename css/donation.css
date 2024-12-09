@@ -24,7 +24,6 @@
     
 }
 
-
 .donation-box h2 {
     font-size: 27px; 
     margin-bottom: 10px;
@@ -216,7 +215,7 @@ button.donate-btn:hover {
 
 /* ----TESTIMORIALS SEKTION---- */
 .testimonials {
-    background-color: #2f2f2f;
+    background-color: #191818;
     padding: 50px 20px;
     text-align: center;
     position: relative;
