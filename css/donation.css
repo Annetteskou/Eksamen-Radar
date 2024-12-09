@@ -7,22 +7,23 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
+    margin-bottom: 40px; /* Tilføj luft under hero-sektionen */
 }
 
  /* ----DONATIONSBOKS SEKTION---- */
-.donation-box {
-    position: absolute;
-    right: 10%; /* Beholder placeringen mod højre */
-    top: 100px;
-    bottom: -70px; /* Overlapper hero-sektionen */
-    background:#232768;
-    color: #fff;
-    padding: 35px 30px; /* Mere plads indeni boksen */
+ .donation-box {
+    position: relative; 
+    width: 400px; /* Bredde */
+    top: 90px;
+    left: 350px;
+    padding: 30px; /* Luft inde i boksen */
+    background: #232768; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Skygge */
     text-align: center;
-    width: 400px; /* Gør boksen bredere */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Lidt stærkere skygge */
-    z-index: 5;
+    color: #fff;
+    
 }
+
 
 .donation-box h2 {
     font-size: 27px; 
@@ -88,10 +89,22 @@ button.donate-btn:hover {
 
 /* Mobilpay */
 .mobilepay {
-    font-size: 20px; /* Større tekst til MobilePay sektionen */
-    color: #fff;
+    display: flex; /* Brug flexbox for justering */
+    flex-direction: column; /* Stak elementer vertikalt */
+    align-items: center; /* Centrer elementerne */
+    justify-content: center; /* Centrer elementerne */
+}
+
+.mobilepay img {
+    max-width: 70px; /* Juster logoets størrelse */
+    height: auto; 
+    margin-bottom: 10px; /* Luft mellem logo og tekst */
+}
+
+.mobilepay p {
+    font-size: 1.3rem; /* Gør teksten læsevenlig */
     font-weight: bold;
-    text-align: center;
+    color: #ffffff; 
 }
 
  /* Radio knapper */
@@ -127,10 +140,11 @@ button.donate-btn:hover {
 .radar-stootte {
     text-align: left;
     margin-bottom: 40px;
+    margin-top: -50px;
 }
 
 .radar-stootte h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -785,5 +799,6 @@ button.donate-btn:hover {
         font-size: 2.5rem; 
     }
 }
+
 
 

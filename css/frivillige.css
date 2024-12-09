@@ -430,126 +430,152 @@ blockquote::before {
 }
 
 /* ----RESPONSIVT TIL TABLET---- */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    /* Hero-sektion */
-.hero {
-    height: 300px; /* Tilpas hero-højden */
-    background-position: center;
-    background-size: cover;
-}
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* HERO Sektion */
+    .hero {
+        height: 350px; /* Justeret højde til iPad */
+    }
 
-.hero-content h1 {
-    font-size: 3rem; 
-    padding: 20px 30px;
-}
+    .hero-content h1 {
+        font-size: 3.5rem; /* Reduceret tekststørrelse */
+        padding: 25px 50px;
+    }
 
-/* Frivillig-formular sektion */
-.frivillig-form-container {
-    padding: 20px; 
-    max-width: 70%; /* Formularen fylder mindre */
-    margin: 0 auto;
-}
+    /* ----HVORFOR TEKST OG FORM SEKTION---- */
+    .frivillig-sektion {
+        display: flex;
+        flex-direction: row; /* Hold teksten og formularen side om side */
+        justify-content: center; /* Centrerer tekst og formular */
+        align-items: flex-start; /* Juster topjustering */
+        gap: 60px; /* Mellemrum mellem tekst og formular */
+        padding: 70px 5%; /* Mere luft omkring sektionen */
+    }
+    
+    /* ----Tekstsektion---- */
+    .hvorfor-bliv-frivillig, .saadan-bliv-frivillig {
+        flex: 1;
+        max-width: 600px; /* Begræns tekstens bredde */
+    }
+    
+    .hvorfor-bliv-frivillig h2, .saadan-bliv-frivillig h2 {
+        font-size: 2.5rem; /* Ensartede overskrifter */
+        margin-bottom: 20px;
+    }
+    
+    .hvorfor-bliv-frivillig p, .saadan-bliv-frivillig p {
+        font-size: 1.4rem; /* Læsbar størrelse */
+        line-height: 1.8; /* Forbedret linjeafstand */
+        margin-bottom: 20px; /* Luft mellem afsnit */
+    }
+    
+    /* ----Formularsektion---- */
+    .frivillig-form-container {
+        flex: 1;
+        max-width: 400px; /* Begræns formularens bredde */
+    }
+    
+    /* Formular-indhold */
+    .frivillig-form label {
+        font-size: 1.3rem; /* Gør labels tydeligere */
+        margin-bottom: 10px; /* Luft under labels */
+    }
+    
+    .frivillig-form input,
+    .frivillig-form textarea {
+        font-size: 1.2rem; /* Læsbar størrelse */
+        padding: 15px; /* Luft i felterne */
+        margin-bottom: 20px; /* Luft mellem felterne */
+    }
+    
+    .frivillig-form button {
+        width: 100%; /* Sørg for, at knappen fylder hele bredden af formularen */
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+    
+    /* FÆLLESSKAB SEKTION */
+    .faellesskab-content h3 {
+        font-size: 2.5rem; 
+        margin-bottom: 20px;
+    }
+    .faellesskab-content p {
+        font-size: 1.7rem; 
+        line-height: 1.6;
+    }
 
-.frivillig-form input,
-.frivillig-form textarea {
-    font-size: 1rem; /* Tilpas inputfeltets tekststørrelse */
-}
+    .faellesskab::before {
+        display: none;
+    }
 
-.saadan-bliv-frivillig{
-    font-size: 2rem; /* Tilpas inputfeltets tekststørrelse */
-}
+    /* CAROUSEL SEKTION */
+    .carousel-item {
+        width: 50%; /* Vis 2 ting ad gangen */
+    }
 
-.saadan-bliv-frivillig p{
-    font-size: 1.5rem; /* Tilpas inputfeltets tekststørrelse */
-}
+    .carousel-billeder {
+        width: 180px; /* Reduceret billedstørrelse */
+        height: 180px;
+    }
 
-    /* Fælleskab sektion*/
-.faellesskab {
-    background-color: #2f2f2f; 
-    padding: 40px 20px; /* Luft foroven og forneden */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* Vertikal opstilling */
-    position: relative;
-}
+    /* TESTIMONIAL SEKTION */
+    .testimonial-circle {
+        width: 280px;
+        height: 280px;
+    }
 
-.faellesskab-content {
-    max-width: 600px; 
-    background-color: #232768; 
-    z-index: 1; /* Sørg for, at teksten ligger øverst */
-    color: white;
-    padding: 20px 30px; /* Lidt ekstra luft omkring teksten */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); 
-    margin: 0 auto; /* Centrerer boksen */
-    position: relative; 
-}
+    blockquote {
+        font-size: 1.1rem; /* Reduceret tekststørrelse */
+        padding: 15px 15px;
+    }
 
-.faellesskab-content h3 {
-    font-size: 2.5rem; 
-    font-weight: bold;
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: 20px;
-}
+    blockquote cite {
+        font-size: 0.95rem;
+    }
 
-.faellesskab-content p {
-    font-size: 1.7rem; 
-    line-height: 1.6;
-    text-align: center;
-}
+    blockquote::before {
+        font-size: 4.5rem;
+    }
 
-/* Pynteelement sektion */
-.faellesskab::before {
-    display: none;
-}
+    .testimonial-circle {
+        width: 450px; /* Gør cirklen større på iPad */
+        height: 450px; /* Bevar proportionerne */
+    }
 
-/* Mød Frivillige sektionen */
-.mood-frivillige h2 {
-    font-size: 3rem; 
-}
+    blockquote {
+        font-size: 1.5rem; /* Gør teksten større */
+    }
 
-/* Mød Frivillige Artikler sektionen */
-.frivillige-container {
-    display: flex;
-    flex-wrap: wrap; /* Tillad, at elementer brydes, hvis der ikke er plads */
-    gap: 20px; 
-    justify-content: space-between; /* Lige stor afstand mellem kolonner */
-    padding: 20px;
-}
+    blockquote cite {
+        font-size: 1.3rem;
+    }
 
-.frivillig {
-    flex: 0 0 30%; /* Hver frivillig tager cirka 30% af bredden */
-    max-width: 30%;
-    margin: 0 auto; /* Centrerer elementet */
-    text-align: center;
-}
+    /* MØD FRIVILLIGE SEKTION */
+    .mood-frivillige h2 {
+        font-size: 2.7rem; 
+    }
+    .frivillige-container {
+        flex-wrap: wrap; /* Beholder fleksibelt layout */
+        gap: 20px;
+    }
 
-.frivillig img {
-    width: 100%; /* Sørg for, at billeder skalerer */
-    height: auto;
-}
+    .frivillig {
+        max-width: 280px; /* Reduceret bredde */
+        margin: 15px 20px; /* Mindre margin */
+    }
 
-.frivillig h3 {
-    font-size: 1.3rem; 
-    margin-bottom: 10px;
-    font-weight: bold;
-}
+    .frivillig img {
+        width: 100%; /* Beholder billede proportionalt */
+    }
 
-.frivillig p {
-    font-size: 1.3rem; /* Gør teksten letlæselig */
-    margin-bottom: 15px;
-    line-height: 1.4;
-}
+    .frivillig h3 {
+        font-size: 1.4rem; /* Justeret overskrift */
+    }
 
-.laas-mere {
-    font-size: 2.5rem; 
-    display: inline-block;
-    margin-top: 10px;
- }
+    .frivillig p {
+        font-size: 1.3rem; 
+    }
 
-.laas-mere:hover {
-    background-color: #c75542; /* Gør hover-effekten tydelig */
+    .laas-mere {
+        font-size: 2.5rem; 
+    }
 }
-}
-
