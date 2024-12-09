@@ -21,7 +21,7 @@
     text-align: center;
     width: 400px; /* Gør boksen bredere */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Lidt stærkere skygge */
-    z-index: 10;
+    z-index: 5;
 }
 
 .donation-box h2 {
@@ -94,7 +94,7 @@ button.donate-btn:hover {
     text-align: center;
 }
 
- /* ----RADIO-KNAPPERNE SEKTION---- */
+ /* Radio knapper */
 .donation-muligheder {
     display: flex; /* Placerer elementerne side om side */
     justify-content: center; /* Centrerer dem vandret */
@@ -302,34 +302,37 @@ button.donate-btn:hover {
 
 /* ----MINDER-GALLERI SEKTION---- */
 /* Sektionens styling */
-.memories-section {
-    background-color: #2f2f2f;
-    padding: 50px 20px;
-    text-align: center;
-    color: white;
+.memory-section {
+    position: relative; /* Sikrer, at absolut placerede elementer er relative til denne container */
+    display: flex;
+    align-items: center; /* Justerer elementer vertikalt */
+    margin: 20px 0; /* Tilføjer lidt plads over og under sektionen */
+    margin-left: 10px;
+    margin-top: 70px;
+    margin-bottom: 40px;
 }
 
-/* Overskriftens styling */
-.memories-section h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-    position: relative;
-    display: inline-block;
-    color: white;
-    background-color: #232768; /* Blå baggrund */
-    padding: 10px 20px;
-}
-
-.memories-section h2::before {
-    content: "";
+.memory-section .orange-box {
     position: absolute;
-    top: 50%;
-    left: -40px; /* Juster orange barens placering */
-    width: 30px;
-    height: 10px;
-    background-color: #b65c43; /* Orange farve */
-    transform: translateY(-50%);
+    width: 100px;
+    height: 50px;
+    margin-bottom: 200px;
+    margin-top: -4px;
+    left: -15px;
+    background-color: #b65c43; 
+    top: 50%; /* Vertikalt centreret */
+    z-index: 1; /* Sørger for, at det orange element ligger bag teksten */
+}
+
+.memory-section h2 {
+    position: relative; /* Påkrævet for at kunne bruge z-index */
+    z-index: 2; /* Sørger for, at teksten og den blå baggrund er øverst */
+    background-color: #232768; 
+    color: white; 
+    padding: 10px 70px; /* Indre afstand i teksten */
+    font-size: 30px; 
+    font-weight: bold; 
+    display: inline-block; /* Gør boksen tilpasset teksten */
 }
 
 /* Galleriets layout */
@@ -337,6 +340,7 @@ button.donate-btn:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 billeder pr. række */
     gap: 20px;
+    margin-top: 30px;
 }
 
 .memories-gallery img {
@@ -352,17 +356,16 @@ button.donate-btn:hover {
     transform: scale(1.05); /* Lidt forstørrelse på hover */
 }
 
-
-/* Call-to-action knap */
+/* ----DEL DINE MINDER SEKTION---- */
 .share-memories {
     display: inline-block;
     margin-top: 20px;
     color: white;
-    background-color: #232768;
-    text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
     padding: 10px 20px;
     transition: background-color 0.3s ease;
+    margin-bottom: 30px;
 }
 
 .share-memories:hover {
@@ -383,8 +386,8 @@ button.donate-btn:hover {
     font-weight: bold; 
 }
 
-/* ----MØD FRIVILLIGE ARTIKLER SEKTION---- */
-.frivillige-container {
+/* ----ARTIKLER SEKTION---- */
+.artikler-container {
     max-width: 1500px; 
     margin: 0 auto; 
     display: flex;
@@ -393,7 +396,7 @@ button.donate-btn:hover {
     background-color: #232768; 
 }
 
-.frivillig {
+.artiklerne {
     text-align: center;
     max-width: 300px;
     margin: 20px;
@@ -403,20 +406,20 @@ button.donate-btn:hover {
     margin: 20px 50px; 
 }
 
-.frivillig h3 {
+.artiklerne h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
     font-weight: bold;
 }
 
-.frivillig img {
+.artiklerne img {
     width: 110%; 
     height: auto; 
     margin-bottom: 15px; 
 }
 
 
-.frivillig p {
+.artiklerne p {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 15px;
@@ -433,3 +436,354 @@ button.donate-btn:hover {
 .laas-mere:hover {
     color: #c75542;
 }
+
+/* ----RESPONSIV MOBIL SEKTION---- */
+@media (max-width: 768px) {
+    /* Hero Sektion */
+    .hero {
+        height: auto; /* Gør højden fleksibel */
+        padding: 10px;
+        background-size: cover;
+    }
+
+    /* Donation Box */
+    .donation-box {
+        position: static; /* Fjern absolut positionering */
+        margin: 20px auto; /* Centrer boksen */
+        width: 90%; /* Tilpas bredden til skærmstørrelsen */
+        padding: 20px 15px; /* Reducer padding */
+    }
+
+    .donation-box h2 {
+        font-size: 24px; /* Juster overskriftens størrelse */
+    }
+
+    /* Infografik og tekst container */
+    .content-container {
+        display: flex;
+        flex-direction: column; /* Gør elementerne vertikale */
+        align-items: center; /* Centrerer indholdet */
+        gap: 20px; /* Tilføj luft mellem infografik og tekst */
+    }
+
+    /* Infografik indhold */
+    .infographic-content {
+        order: 1; /* Sikrer, at billedet kommer først */
+        text-align: center; /* Centrerer billedet */
+    }
+
+    .infographic-content img {
+        width: 100%; /* Fylder hele bredden */
+        max-width: 400px; /* Maksimal bredde */
+        margin: 0 auto; /* Centrerer billedet */
+        display: block; /* Sørger for korrekt visning */
+    }
+
+    /* Tekst indhold */
+    .text-columns {
+        order: 2; /* Sikrer, at teksten vises under billedet */
+        padding: 0 15px; /* Indrykning til venstre og højre */
+        text-align: left; /* Venstrestiller teksten */
+    }
+
+    .text-columns h2 {
+        text-align: left; /* Venstrestiller teksten */
+        margin-bottom: 15px; /* Tilføj lidt luft under overskriften */
+    }
+
+    .text-columns p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        text-align: left; /* Venstrestiller teksten */
+        margin-bottom: 15px; /* Gør teksten lettere at læse */
+    }
+
+    .text-columns ul {
+        padding-left: 20px; /* Indryk for punktlister */
+        line-height: 1.; /* Forbedrer læsbarheden */
+        text-align: left; /* Venstrestiller teksten */
+        font-size: 1.2rem;
+        margin-bottom: 20px; 
+    }
+    
+    /* Testimonials */
+    .testimonials {
+        padding: 20px;
+    }
+    
+    .testimonials h2 {
+        font-size: 1.6rem;
+        margin-bottom: 50px;
+    }
+    
+    .blue-box {
+        display: none;
+    }
+
+    .testimonials-container {
+        flex-direction: column; /* Layout bliver vertikalt */
+        gap: 20px;
+    }
+
+    .testimonial {
+        flex-direction: column; /* Billede og tekst under hinanden */
+        text-align: center;
+    }
+
+    .testimonial img {
+        margin-bottom: 10px; /* Afstand under billedet */
+    }
+
+    .testimonial-content p {
+        font-size: 1rem;
+    }
+
+    .testimonial-content blockquote {
+        font-size: 1.3rem;
+    }
+
+    /* Memory Sektion */
+    .memory-section {
+        padding: 10px 0; /* Mindre padding */
+        margin-bottom: -30px;
+    }
+
+    .memory-section h2 {
+        font-size: 1.5rem; /* Mindre skrifttype */
+        padding: 10px 20px;
+    }
+
+    .memory-section .orange-box {
+        width: 100px; /* Mindre bredde */
+        height: 40px; /* Mindre højde */
+        left: -10px;
+        margin-top: -30px;
+    }
+
+    .memories-gallery {
+        grid-template-columns: 1fr; /* Kun ét billede pr. række */
+        gap: 10px;
+    }
+
+    .memories-gallery img {
+        height: auto; /* Gør billederne fleksible */
+        width: 100%; /* Gør billederne fuld bredde */
+    }
+
+    .share-memories {
+        font-size: 1.8rem;
+    
+    }
+    
+    /* Vil du vide mere artikler Sektion */
+    .artikler-container {
+        flex-direction: column; /* Elementer stables vertikalt */
+        gap: 20px;
+        align-items: center; /* Centrer elementerne */
+    }
+
+    .artiklerne {
+        width: 90%; /* Fylder næsten hele bredden */
+        margin-bottom: 20px;
+    }
+
+    .artiklerne h3{
+        font-size:2rem;
+    }
+
+    .artiklerne p {
+        font-size: 1.2rem;
+    }
+
+    .artiklerne img {
+    margin-left: -20px;
+    }
+
+    .laas-mere {
+        font-size: 2rem; 
+    }
+}
+
+/* ----RESPONSIV TABLET SEKTION---- */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Hero sektion */
+    .hero {
+        flex-direction: column; /* Placer donation-boksen under billedet */
+        align-items: center; 
+        height: auto; 
+    }
+
+    /* Donation boks sektion */
+    .donation-box {
+        position: static; /* Fjern absolut positionering */
+        margin: 20px auto; /* Centrer boksen */
+        width: 90%; /* Gør boksen fleksibel til skærmstørrelsen */
+        padding: 20px; 
+        max-width: 400px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    }
+
+    .donation-box h2 {
+        font-size: 30px; /* Juster størrelsen for bedre skærmtilpasning */
+        margin-bottom: 15px; /* Afstand mellem tekst og bokse */
+    }
+
+    .penge {
+        flex-wrap: wrap; /* Gør knapperne fleksible */
+        justify-content: center; 
+        gap: 10px; /* Reducér afstand mellem knapper */
+    }
+
+    .penge button {
+        font-size: 25px; 
+        width: 100px; 
+        height: 50px; 
+    }
+
+    button.donate-btn {
+        font-size: 30px; /* Mindre knaptekst */
+        padding: 15px;
+        width: 100%; /* Sørg for, at knappen fylder hele boksen */
+    }
+
+    .mobilepay {
+        font-size: 30px; /* Juster teksten til MobilePay */
+        margin-top: 15px;
+    }
+
+    .donation-box input[type="text"] {
+        font-size: 23px; 
+    }
+
+    .donation-muligheder label {
+        font-size: 25px;
+    }
+
+    /* "Din støtte er vigtigt" sektion */
+    .radar-stootte h2 {
+        font-size: 3rem;
+    }
+
+    .radar-stootte p {
+        font-size: 1.6rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    /* Infografik og tekst container sektion */
+    .content-container {
+        display: flex;
+        flex-direction: column; /* Gør elementerne vertikale */
+        align-items: center; /* Centrerer indholdet */
+        gap: 20px; /* Tilføj luft mellem infografik og tekst */
+    }
+
+    /* Infografik indhold */
+    .infographic-content {
+        display: flex; /* Brug flexbox */
+        justify-content: center; /* Centrerer indholdet horisontalt */
+        align-items: center; /* Centrerer indholdet vertikalt, hvis nødvendigt */
+        text-align: center; /* Centrerer tekst eller andre elementer */
+    }
+    
+    .infographic-content img {
+        max-width: 100%; /* Billedet fylder containerens bredde */
+        height: auto; /* Bevarer billedets proportioner */
+        margin: 0 auto; /* Sørger for, at billedet centreres i forhold til sin container */
+        display: block; /* Sikrer, at billedet behandles som en blok for centrering */
+    }
+
+    /* Tekst indhold sektion */
+    .text-columns {
+        order: 2; /* Sikrer, at teksten vises under billedet */
+        padding: 0 15px; /* Indrykning til venstre og højre */
+        text-align: left; /* Venstrestiller teksten */
+    }
+
+    .text-columns h2 {
+        text-align: left; /* Venstrestiller teksten */
+        margin-bottom: 15px; /* Tilføj lidt luft under overskriften */
+        font-size: 2.5rem;
+    }
+
+    .text-columns p {
+        font-size: 1.6rem;
+        line-height: 1.8;
+        text-align: left; /* Venstrestiller teksten */
+        margin-bottom: 15px; /* Gør teksten lettere at læse */
+    }
+
+    .text-columns ul {
+        padding-left: 20px; /* Indryk for punktlister */
+        line-height: 1.; /* Forbedrer læsbarheden */
+        text-align: left; /* Venstrestiller teksten */
+        font-size: 1.6rem;
+        margin-bottom: 20px; 
+    }
+
+    /* Testimonials sektion */
+    .testimonials {
+        padding: 20px;
+    }
+
+    .testimonials h2 {
+        font-size: 2.8rem;
+        margin-bottom: 50px;
+    }
+
+    .testimonial-content blockquote {
+        font-size: 1.3rem;
+    }
+
+    .testimonials p {
+        font-size: 1.3rem;
+    } 
+
+    .blue-box { 
+        display: none;
+    }
+
+    /* Minder sektion */
+    .share-memories {
+        font-size: 2.2rem;
+    
+    }
+
+    /* Vil du vide mere artikler Sektion */
+    .artikler-container {
+        display: flex;
+        flex-wrap: wrap; /* Tillad, at elementer brydes, hvis der ikke er plads */
+        gap: 20px; 
+        justify-content: space-between; /* Lige stor afstand mellem kolonner */
+        padding: 20px;
+    }
+    
+    .artiklerne {
+        flex: 0 0 30%; /* Hver frivillig tager cirka 30% af bredden */
+        max-width: 30%;
+        margin: 0 auto; /* Centrerer elementet */
+        text-align: center;
+    }
+    
+    .artiklerne img {
+        width: 100%; /* Sørg for, at billeder skalerer */
+        height: auto;
+    }
+    
+    .artiklerne h3 {
+        font-size: 1.5rem; 
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    
+    .artiklerne p {
+        font-size: 1.3rem; /* Gør teksten letlæselig */
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+    .laas-mere {
+        font-size: 2.5rem; 
+    }
+}
+
+

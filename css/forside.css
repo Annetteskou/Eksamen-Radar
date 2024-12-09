@@ -208,7 +208,7 @@
   margin-top: 10px; /* Lidt luft ovenover */
 }
 
-/* ----RESPONSIV TIL IPHONE---- */
+/* ----RESPONSIV TIL MOBIL---- */
 @media (max-width: 480px) {
 
 /* Hero sektion*/
@@ -248,7 +248,7 @@
     max-width: 100%;
     font-size: 1.4rem;
     margin: 0;
-    margin-top: -30px;
+    margin-top: 10px;
 
 }
 
@@ -266,7 +266,6 @@
   position: static; /* Fjern absolut positionering */
   margin: 0 auto; /* Centrer billedet */
   width: 100%; /* Sørg for, at det fylder containeren */
-  margin-top: 20px;
 }
 
 .intro-image img {
@@ -280,7 +279,8 @@ display: none;
 
 /* Vil du vide mere sektion */
 .more-about-radar {
-  margin-top: 0px;
+  margin-top: 50px;
+  margin-bottom: -30px;
 }
 
 /* Artikel sektion */
@@ -322,7 +322,7 @@ display: none;
 }
 }
 
-/* ----RESPONSIVT TIL IPAD ---- */
+/* ----RESPONSIVT TIL TABLET ---- */
 @media (min-width: 768px) and (max-width: 1024px) {
 
 /* Hero sektion */

@@ -429,33 +429,41 @@ blockquote::before {
     }
 }
 
-/* ----RESPONSIVT TIL IPAD---- */
+/* ----RESPONSIVT TIL TABLET---- */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     /* Hero-sektion */
-    .hero {
-        height: 300px; /* Tilpas hero-højden */
-        background-position: center;
-        background-size: cover;
-    }
+.hero {
+    height: 300px; /* Tilpas hero-højden */
+    background-position: center;
+    background-size: cover;
+}
 
-    .hero-content h1 {
-        font-size: 3rem; 
-        padding: 20px 30px;
-    }
+.hero-content h1 {
+    font-size: 3rem; 
+    padding: 20px 30px;
+}
 
-    /* Frivillig-formular sektion */
-    .frivillig-form-container {
-        padding: 20px; 
-        max-width: 70%; /* Formularen fylder mindre */
-        margin: 0 auto;
-    }
+/* Frivillig-formular sektion */
+.frivillig-form-container {
+    padding: 20px; 
+    max-width: 70%; /* Formularen fylder mindre */
+    margin: 0 auto;
+}
 
-    .frivillig-form input,
-    .frivillig-form textarea {
-        font-size: 1rem; /* Tilpas inputfeltets tekststørrelse */
-    }
+.frivillig-form input,
+.frivillig-form textarea {
+    font-size: 1rem; /* Tilpas inputfeltets tekststørrelse */
+}
 
-    /* ----FÆLLESSKAB SEKTION---- */
+.saadan-bliv-frivillig{
+    font-size: 2rem; /* Tilpas inputfeltets tekststørrelse */
+}
+
+.saadan-bliv-frivillig p{
+    font-size: 1.5rem; /* Tilpas inputfeltets tekststørrelse */
+}
+
+    /* Fælleskab sektion*/
 .faellesskab {
     background-color: #2f2f2f; 
     padding: 40px 20px; /* Luft foroven og forneden */
@@ -465,7 +473,6 @@ blockquote::before {
     flex-direction: column; /* Vertikal opstilling */
     position: relative;
 }
-
 
 .faellesskab-content {
     max-width: 600px; 
@@ -478,79 +485,71 @@ blockquote::before {
     position: relative; 
 }
 
-
 .faellesskab-content h3 {
-    font-size: 1.8rem; 
+    font-size: 2.5rem; 
     font-weight: bold;
     color: #ffffff;
     text-align: center;
     margin-bottom: 20px;
 }
 
-
 .faellesskab-content p {
-    font-size: 1.2rem; 
-    line-height: 1.8;
+    font-size: 1.7rem; 
+    line-height: 1.6;
     text-align: center;
 }
 
 /* Pynteelement sektion */
 .faellesskab::before {
-    left: 76%; /* Centrer firkanten horisontalt */
+    display: none;
 }
 
-    /* Mød Frivillige sektionen */
-    .mood-frivillige h2 {
-        font-size: 3rem; 
-    }
+/* Mød Frivillige sektionen */
+.mood-frivillige h2 {
+    font-size: 3rem; 
+}
 
-    /* Mød Frivillige Artikler sektionen */
-    .frivillige-container {
-        display: flex;
-        flex-wrap: wrap; /* Tillad, at elementer brydes, hvis der ikke er plads */
-        gap: 20px; 
-        justify-content: space-between; /* Lige stor afstand mellem kolonner */
-        padding: 20px;
-    }
+/* Mød Frivillige Artikler sektionen */
+.frivillige-container {
+    display: flex;
+    flex-wrap: wrap; /* Tillad, at elementer brydes, hvis der ikke er plads */
+    gap: 20px; 
+    justify-content: space-between; /* Lige stor afstand mellem kolonner */
+    padding: 20px;
+}
 
-    .frivillig {
-        flex: 0 0 30%; /* Hver frivillig tager cirka 30% af bredden */
-        max-width: 30%;
-        margin: 0 auto; /* Centrerer elementet */
-        text-align: center;
-    }
+.frivillig {
+    flex: 0 0 30%; /* Hver frivillig tager cirka 30% af bredden */
+    max-width: 30%;
+    margin: 0 auto; /* Centrerer elementet */
+    text-align: center;
+}
 
-    .frivillig img {
-        width: 100%; /* Sørg for, at billeder skalerer */
-        height: auto;
-    }
+.frivillig img {
+    width: 100%; /* Sørg for, at billeder skalerer */
+    height: auto;
+}
 
-    .frivillig h3 {
-        font-size: 1.3rem; 
-        margin-bottom: 10px;
-        font-weight: bold;
-    }
+.frivillig h3 {
+    font-size: 1.3rem; 
+    margin-bottom: 10px;
+    font-weight: bold;
+}
 
-    .frivillig p {
-        font-size: 1.3rem; /* Gør teksten letlæselig */
-        margin-bottom: 15px;
-        line-height: 1.4;
-    }
+.frivillig p {
+    font-size: 1.3rem; /* Gør teksten letlæselig */
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
 
-    .laas-mere {
-        font-size: 2.5rem; 
-        font-weight: bold;
-        text-decoration: none;
-        color: white;
-        background-color: #232768;
-        padding: 10px 15px;
-        border-radius: 5px;
-        display: inline-block;
-        margin-top: 10px;
-    }
+.laas-mere {
+    font-size: 2.5rem; 
+    display: inline-block;
+    margin-top: 10px;
+ }
 
-    .laas-mere:hover {
-        background-color: #c75542; /* Gør hover-effekten tydelig */
-    }
+.laas-mere:hover {
+    background-color: #c75542; /* Gør hover-effekten tydelig */
+}
 }
 
