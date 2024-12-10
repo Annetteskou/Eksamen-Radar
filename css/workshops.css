@@ -1,0 +1,212 @@
+/*----WORKSHOPS SEKTION---- */
+.workshops-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.workshops-header h1 {
+    font-size: 36px;
+    background-color: #B56733;
+    color: white;
+    padding: 15px 30px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.workshop-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
+    gap: 20px; /* Afstand mellem kolonner og rækker */
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.workshop-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Jævn fordeling af indhold */
+    height: 450px; /* Ens højde */
+    padding: 20px; /* Ens spacing inde i kortet */
+}
+
+.workshop-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid white; /* Adskiller billede fra tekst */
+}
+
+.workshop-details {
+    padding: 20px;
+    background-color: black;
+}
+
+.workshop-details h2 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.workshop-details p {
+    color: white;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Knapper */
+.buttons {
+    display: flex;
+    gap: 10px; /* Afstand mellem knapper */
+    margin-top: 20px; /* Luft mellem tekst og knapper */
+}
+
+.buttons button {
+    background-color: #B56733; /* Orange farve */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buttons button:hover {
+    background-color: #8a4727; /* Mørkere nuance ved hover */
+    transform: scale(1.05); /* Let zoom ved hover */
+}
+
+
+/* Har du andre ideaer */
+.workshop-ideas {
+    margin-top: 50px; /* Skab luft mellem workshops og idé-sektionen */
+    text-align: center;
+}
+
+textarea {
+    width: 90%;
+    max-width: 800px;
+    height: 150px;
+    border: 2px solid #B56733; /* Matchende kantfarve */
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    margin: 20px auto;
+    display: block; /* Centrer tekstfeltet */
+    background-color: #f9f4ef; /* Lys baggrund */
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #8a4727; /* Fremhæv ved fokus */
+    box-shadow: 0 0 5px #8a4727;
+}
+
+button[type="submit"] {
+    background-color: #B56733;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #8a4727;
+    transform: scale(1.05);
+}
+
+/* Vil du vide mere? */
+.more-about-radar {
+  text-align: center; 
+  margin-bottom: 10px;
+  margin-top: 150px;
+}
+
+.more-about-radar h2 {
+  font-size: 2rem; 
+  color: #F4F1EA;
+  font-weight: bold; 
+}
+
+/*----RELEVANTE ARTIKLER SEKTION---- */
+.artikler {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 100px; /* Giver afstand mellem artiklerne */
+  justify-content: center; /* Centrerer artiklerne */
+  align-items: flex-start; /* Sørger for, at artiklerne starter ens */
+  background-color: #232768;
+}
+
+.artikel {
+  flex: 1 1 300px;
+  text-align: center;
+  max-width: 320px;
+  padding: 20px;
+  color: #E8E8E8;
+}
+
+.artikel:hover {
+  transform: scale(1.05); /* Forstørrer artiklen lidt */
+}
+
+/* Artikel billeder */
+.artikel img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; /* Gør billedet glidende ved zoom */
+}
+
+.artikel:hover img {
+  transform: scale(1.1); /* Zoomer billedet lidt mere ved hover */
+}
+
+/* Artikel overskift under billederne */
+.artikel h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+/* Artikel brødtekst under billederne */
+.artikel p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.artikel a {
+  text-decoration: none;
+  color: #E8E8E8;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* Gør "Læs mere" større */
+.read-more {
+  font-size: 1.5rem; 
+  font-weight: bold; 
+  text-align: center; 
+  display: inline-block; /* Holder størrelsen konsekvent */
+  margin-top: 10px; /* Lidt luft ovenover */
+}

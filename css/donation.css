@@ -20,7 +20,7 @@
     background: #232768; 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Skygge */
     text-align: center;
-    color: #fff;
+    color:  #F4F1EA;
     
 }
 
@@ -46,7 +46,7 @@
 }
 
 .penge button {
-    background: #fff;
+    background:  #F4F1EA;
     border: none;
     color: #000000;
     font-size: 22px; 
@@ -73,7 +73,7 @@
 /*Donation knap */
 button.donate-btn {
     background: #b65c43;
-    color: #fff;
+    color:  #F4F1EA;
     font-size: 30px; 
     font-weight: bold;
     padding: 15px; /* Øg polstringen */
@@ -103,7 +103,7 @@ button.donate-btn:hover {
 .mobilepay p {
     font-size: 1.3rem; /* Gør teksten læsevenlig */
     font-weight: bold;
-    color: #ffffff; 
+    color:  #F4F1EA; 
 }
 
  /* Radio knapper */
@@ -132,7 +132,7 @@ button.donate-btn:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
-    color: #fff;
+    color: #E8E8E8
 }
 
 /* "Din støtte er vigtigt" */
@@ -215,7 +215,7 @@ button.donate-btn:hover {
 
 /* ----TESTIMORIALS SEKTION---- */
 .testimonials {
-    background-color: #191818;
+    background-color: #3A3A3A;
     padding: 50px 20px;
     text-align: center;
     position: relative;
@@ -225,7 +225,7 @@ button.donate-btn:hover {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 0; 
-    color: white;
+    color:  #F4F1EA;
     background-color: #b65c43; 
     padding: 10px 20px;
     display: inline-block;
@@ -234,7 +234,7 @@ button.donate-btn:hover {
 .blue-box {
     width: 300px; 
     height: 50px; /* Højden på den blå boks */
-    background-color: #232768; 
+    background-color: #3A3A3A; 
     margin-top: -33px; /* Sørg for, at boksen rykker tæt på den orange boks */
     margin-left: 755px;
     margin-bottom: 50px;
@@ -340,8 +340,8 @@ button.donate-btn:hover {
 .memory-section h2 {
     position: relative; /* Påkrævet for at kunne bruge z-index */
     z-index: 2; /* Sørger for, at teksten og den blå baggrund er øverst */
-    background-color: #232768; 
-    color: white; 
+    background-color: #232768;
+    color:  #F4F1EA;
     padding: 10px 70px; /* Indre afstand i teksten */
     font-size: 30px; 
     font-weight: bold; 
@@ -373,7 +373,7 @@ button.donate-btn:hover {
 .share-memories {
     display: inline-block;
     margin-top: 20px;
-    color: white;
+    color:  #F4F1EA;
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px 20px;
@@ -395,7 +395,7 @@ button.donate-btn:hover {
   
 .vil-du-vide-mere h3 {
     font-size: 2.5rem; 
-    color: #ffffff; 
+    color:  #F4F1EA;
     font-weight: bold; 
 }
 
@@ -415,7 +415,7 @@ button.donate-btn:hover {
     margin: 20px;
     display: inline-block;
     vertical-align: top;
-    color: white;
+    color:  #E8E8E8;
     margin: 20px 50px; 
 }
 
@@ -442,7 +442,7 @@ button.donate-btn:hover {
 .laas-mere {
     font-size: 1.6rem;
     font-weight: bold;
-    color: white;
+    color:  #F4F1EA;
     text-decoration: none;
 }
 

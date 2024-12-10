@@ -10,7 +10,7 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   line-height: 1.5;
-  background-color: #191818;
+  background-color: #3A3A3A;
 }
 
 /* ----HEADER SEKTION---- */
@@ -22,7 +22,7 @@ body {
   height: auto;
   position: relative;
   z-index: 10;
-  background-color: #191818;
+  background-color: #3A3A3A;
 }
 
 /* ----LOGO SEKTION---- */
@@ -42,7 +42,7 @@ body {
   display: none; /* Skjul på store skærme */
   cursor: pointer;
   font-size: 2rem;
-  color: white;
+  color: #F4F1EA;
   z-index: 20; /* Sørger for, at knappen er øverst */
 }
 
@@ -66,7 +66,7 @@ body {
   gap: 30px;
   padding: 0;
   margin: 0;
-  background-color: #191818;
+  background-color:#3A3A3A;
   z-index: 15; /* Sørg for, at dropdown-menu også vises */
   position: relative;
 }
@@ -77,7 +77,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: white;
+  color: #F4F1EA;
   padding: 10px 15px;
   display: block;
 }
@@ -114,7 +114,7 @@ body {
 
   /* ----NYHEDSBREV SEKTION---- */
 .nyhedsbrev {
-  background-color: #191818;/* Baggrund for sektionen */
+  background-color: #3A3A3A;/* Baggrund for sektionen */
   padding: 100px 0;
   text-align: center;
   position: relative;
@@ -124,7 +124,7 @@ body {
 /* Teksten over boksen */
 .nyhedsbrev-header h2 {
   font-size: 2.8rem; /* Større overskrift */
-  color: #ffffff;
+  color: #F4F1EA;
   text-transform: uppercase;
   margin-bottom: 20px;
   font-weight: bold;
@@ -165,7 +165,7 @@ body {
 .nyhedsbrev-container p {
   font-size: 2rem; 
   font-weight: bold;
-  color: #ffffff;
+  color: #E8E8E8;
   margin: 0;
   text-align: left; /* Venstrestillet tekst */
   flex: 1;
@@ -187,7 +187,7 @@ body {
   padding: 12px;
   border: 2px solid #191818; /* Sort kant */
   font-size: 1rem;
-  background-color: #f4f4f4; 
+  background-color: #F4F1EA;
   color: #2f2f2f;
 }
 
@@ -198,7 +198,7 @@ body {
 .nyhedsbrev-form button {
   width: 120px; 
   padding: 12px 0;
-  background-color: white;
+  background-color: #F4F1EA;
   color: rgb(6, 6, 6);
   font-size: 1rem;
   font-weight: bold;
@@ -227,7 +227,7 @@ body {
 .footer {
   background-color: #b65c43; 
   padding: 40px 20px; 
-  color: #ffffff; 
+  color: #E8E8E8;
   text-align: center;
 }
 

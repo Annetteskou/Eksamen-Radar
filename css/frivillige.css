@@ -11,7 +11,7 @@
 
 .hero-content h1 {
     font-size: 4rem;
-    color: white;
+    color: #F4F1EA;
     background-color: rgba(230, 110, 81, 0.7);
     padding: 30px 60px;
 }
@@ -35,20 +35,23 @@
 .hvorfor-bliv-frivillig h2 {
     font-size: 2.2rem;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #F4F1EA;
 }
 
 .hvorfor-bliv-frivillig p {
     font-size: 1.2rem;
     margin-bottom: 20px;
-    color: #ffffff; 
+    color: #E8E8E8;
 }
 
 /* Formularsektion */
 .frivillig-form-container {
     flex: 1;
     max-width: 45%; 
+    background-color: #1c1c1c;
     padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Let skygge */
 }
 
 /* Formular-indhold */
@@ -57,7 +60,7 @@
     font-weight: bold;
     margin-bottom: 5px;
     font-size: 1rem;
-    color: #ffffff;
+    color: #F4F1EA;
 }
 
 .frivillig-form input,
@@ -68,8 +71,8 @@
     border: 2px solid #444;
     border-radius: 5px;
     font-size: 1rem;
-    background-color: #191818;
-    color: white;
+    background-color: #2f2f2f;
+    color: #F4F1EA;
 }
 
 .frivillig-form textarea {
@@ -79,7 +82,7 @@
 .frivillig-form button {
     width: 100%;
     background-color: #b65c43; /* Orange knap */
-    color: white;
+    color: #F4F1EA;
     font-size: 1.2rem;
     font-weight: bold;
     padding: 12px;
@@ -96,7 +99,7 @@
 
 /* ----FÆLLESSKAB SEKTION---- */
 .faellesskab {
-    background-color: #191818;
+    background-color: #3A3A3A;
     padding: 40px 20px; /* Luft foroven og forneden */
     display: flex;
     justify-content: center;
@@ -110,7 +113,7 @@
     max-width: 600px; 
     background-color: #232768; 
     z-index: 1; /* Sørg for, at teksten ligger øverst */
-    color: white;
+    color: #E8E8E8;
     padding: 20px 30px; /* Lidt ekstra luft omkring teksten */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); 
     margin: 0 auto; /* Centrerer boksen */
@@ -121,7 +124,7 @@
 .faellesskab-content h3 {
     font-size: 1.8rem; 
     font-weight: bold;
-    color: #ffffff;
+    color: #F4F1EA;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -194,7 +197,7 @@
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: #F4F1EA;
     padding: 10px;
     cursor: pointer;
     font-size: 24px;
@@ -268,7 +271,7 @@ blockquote {
     position: relative;
     z-index: 1; /* Sørger for, at teksten altid er over cirklen */
     font-style: italic;
-    color: #ffffff; 
+    color: #F4F1EA;
     line-height: 1.6; 
     font-size: 1.1rem; 
     text-align: center;
@@ -283,14 +286,14 @@ blockquote cite {
     font-weight: bold;
     font-size: 1rem; 
     text-transform: none; /* Undgå store bogstaver */
-    color: #ffffff;
+    color: #E8E8E8;
     text-align: center;
 }
 
 blockquote::before {
     content: '“'; /* Citatmærket */
     font-size: 5rem; /* Gør citatmærket større */
-    color: white;
+    color: #E8E8E8;
     display: block;
     margin-bottom: -50px; /* Tættere på teksten */
     margin-top: -40px;
@@ -307,7 +310,7 @@ blockquote::before {
   
 .mood-frivillige h2 {
     font-size: 2.5rem; 
-    color: #ffffff; 
+    color: #F4F1EA;
     font-weight: bold; 
 }
 
@@ -327,7 +330,7 @@ blockquote::before {
     margin: 20px;
     display: inline-block;
     vertical-align: top;
-    color: white;
+    color: #E8E8E8;
     margin: 20px 50px; 
 }
 
@@ -354,7 +357,7 @@ blockquote::before {
 .laas-mere {
     font-size: 1.6rem;
     font-weight: bold;
-    color: white;
+    color: #F4F1EA;
     text-decoration: none;
 }
 
