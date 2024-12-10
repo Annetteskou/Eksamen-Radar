@@ -217,7 +217,6 @@
     position: absolute;
     right: 10px; /* Juster afstand fra tekst */
     top: 50%;
-    transform: translateY(-50%);
     width: 6px;
     height: 6px;
     transform: translateY(-50%) rotate(45deg);
@@ -234,7 +233,6 @@
     border-width: 2px 2px 0 0;
 }
 
-
 .workshop-navigation {
     display: flex;
     justify-content: space-between;
@@ -244,6 +242,7 @@
     font-weight: bold;
     margin-left: 10px;
     margin-right: 19px;
+    cursor: pointer;
 }
 
 /* Idéer til workshops */
@@ -259,11 +258,11 @@
 textarea {
     width: 90%;
     max-width: 800px;
-    height: 150px;
-    border: 2px solid #b65c43; /* Matchende kantfarve */
+    height: 200px;
+    border: 2px solid black;
     border-radius: 5px;
     padding: 10px;
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'Arial', sans-serif;
     margin: 20px auto;
     display: block; /* Centrer tekstfeltet */
@@ -277,18 +276,19 @@ textarea:focus {
 }
 
 button[type="submit"] {
-    background-color: #b65c43;
-    color: #F4F1EA;
-    border: none;
-    padding: 10px 20px;
+    background-color: #F4F1EA;
+    color: black;
+    border: 2px solid black;
+    padding: 5px 30px;
     font-size: 16px;
+    font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 button[type="submit"]:hover {
-    background-color: #8a4727;
+    background-color:  #b65c43;
     transform: scale(1.05);
 }
 
