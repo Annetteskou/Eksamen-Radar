@@ -17,19 +17,30 @@
 
 .filter-buttons {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    justify-content: flex-start; /* Placerer knapperne til venstre */
+    gap: 10px; /* Mellemrum mellem knapperne */
+    margin-bottom: 100px; /* Luft mellem knapperne og sektionen nedenfor */
+    margin-left: 120px;
 }
 
 .filter-buttons button {
-    background-color: black;
-    color: #F4F1EA;
-    border: 2px solid rgb(0, 0, 0);
-    padding: 10px 20px;
-    font-size: 1rem;
+    background-color: black; /* Sort baggrund */
+    color: white; /* Hvid tekst */
+    border: 2px solid black; /* Sort kant */
+    padding: 10px 20px; /* Indvendig padding */
+    font-size: 16px; /* Juster tekststørrelse */
+    font-weight: bold;
+    text-transform: uppercase; /* Store bogstaver */
     cursor: pointer;
+    transition: all 0.3s ease; /* Glidende overgang */
 }
+
+.filter-buttons button:nth-child(2):hover {
+    background-color: white; /* Hvid baggrund på hover */
+    color: black; /* Sort tekst på hover */
+    border: 2px solid white; /* Hvid kant på hover */
+}
+
 .workshop-list {
     display: flex;
     flex-direction: column; /* Stacks items vertically */
@@ -41,10 +52,10 @@
 .workshop-item {
     display: flex;
     position: relative; /* Gør det muligt at placere dato absolut */
-    gap: 30px; /* Space between image and details */
+    gap: 30px; /* Mellemrum melle billede og infoSpace between image and details */
     padding: 20px;
     margin: 10px 0; /* Giver mere afstand mellem hver boks */
-    height: auto; /* Adjust height to fit content */
+    height: auto; 
     margin-left: 100px;
     margin-right: 100px;
 }
@@ -71,48 +82,97 @@
 }
 
 .workshop-details {
-    padding: 20px; /* Gør teksten lidt mere centreret */
+    padding: 30px; /* Gør teksten lidt mere centreret */
     background-color: black;
     border: 2px solid #F4F1EA;
     flex: 1; /* Sørger for, at teksten fylder pladsen */
 }
 
 .workshop-details p {
-    margin-bottom: 10px; /* Space between date and title */
+    margin-bottom: 30px; /* Space between date and title */
+    margin-top: -20px;
     font-weight: bold;
-    font-size: 16px;
-    margin-left: 5px;
+    font-size: 17px;
+    margin-left: -10px;
     color: #E8E8E8;
 }
 
 .workshop-details h2 {
     font-size: 30px;
-    margin-bottom: 15px; /* Space between title and buttons */
+    margin-bottom: 10px; /* Space between title and buttons */
     color: #F4F1EA;
     position: relative; 
     text-align: center; /* Centrerer teksten */
 }
 
 .buttons {
+    position: absolute; /* Gør knapperne absolut placeret */
+    bottom: 1px; /* Flytter knapperne lidt uden for den sorte boks */
     display: flex;
-    gap: 10px; /* Space between buttons */
-    margin-top: 20px; /* Space between text and buttons */
+    gap: 10px; /* Giver afstand mellem knapperne */
+    z-index: 1; /* Sørger for, at knapperne vises øverst */
 }
 
 .buttons button {
-    background-color: #b65c43; 
-    color: #F4F1EA;
-    border: none;
-    padding: 10px 20px;
-    font-size: 17px;
+    padding: 10px 20px; /* Indvendig padding */
+    font-size: 14px;
     font-weight: bold;
+    text-transform: uppercase; /* Store bogstaver */
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: relative;
+    transition: all 0.3s ease;
 }
 
-.buttons button:hover {
-    background-color: #8a4727; /* Darker shade on hover */
-    transform: scale(1.05); /* Slight zoom on hover */
+.buttons button:nth-child(1) {
+    background-color: #B56733; /* Orange baggrund */
+    color: black; /* Sort tekst */
+    border: 2px solid #B56733; /* Orange kant */
+}
+
+.buttons button:nth-child(1):hover {
+    background-color: black; /* Sort baggrund på hover */
+    color: #B56733; /* Orange tekst på hover */
+    border: 2px solid #B56733; /* Orange kant på hover */
+    transform: scale(1.05); /* Lidt zoom-effekt på hover */
+}
+
+.buttons button:nth-child(2) {
+    background-color: #232768;  
+    color: #F4F1EA; 
+    border: 2px solid #232768; /* Hvid kant */
+}
+
+.buttons button:nth-child(2):hover {
+    background-color: #B56733;
+    color: #232768; 
+    border: 2px solid #232768; 
+    transform: scale(1.05); /* Lidt zoom-effekt på hover */
+}
+
+.buttons button:after {
+    content: ""; /* Tilføjer en lille pil */
+    position: absolute;
+    right: 10px; /* Juster afstand fra tekst */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    transform: translateY(-50%) rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+.buttons button:nth-child(1):after {
+    border: solid #232768;  /* Blå pil */
+    border-width: 2px 2px 0 0;
+}
+
+.buttons button:nth-child(2):after {
+    border: solid #B56733; /* Orange pil */
+    border-width: 2px 2px 0 0;
+}
+
+.buttons button:hover:after {
+    border-color: #F4F1EA; /* Ændrer pilens farve til hvid på hover */
 }
 
 .workshop-navigation {
