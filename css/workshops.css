@@ -15,6 +15,27 @@
     letter-spacing: 2px; /* Giver teksten mere "luft" */
 }
 
+.search-input {
+    background-color: black; 
+    color: #F4F1EA;
+    border: 2px solid #F4F1EA;
+    padding: 10px 20px; /* Indvendig padding */
+    font-size: 16px; 
+    outline: none; /* Fjern standard outline */
+    transition: all 0.3s ease; /* Glidende overgang */
+    width: 200px; /* Bredde på søgefeltet */
+}
+
+.search-input::placeholder {
+    color: #aaa; /* Grå farve til placeholder-tekst */
+}
+
+.search-input:focus {
+    background-color: #F4F1EA; /* Hvid baggrund på fokus */
+    color: black; /* Sort tekst på fokus */
+    border: 2px solid #B56733; /* Orange kant på fokus */
+}
+
 .filter-buttons {
     display: flex;
     justify-content: flex-start; /* Placerer knapperne til venstre */
@@ -24,21 +45,37 @@
 }
 
 .filter-buttons button {
-    background-color: black; /* Sort baggrund */
+    background-color: black; /* Gør baggrunden gennemsigtig */
     color: white; /* Hvid tekst */
-    border: 2px solid black; /* Sort kant */
-    padding: 10px 20px; /* Indvendig padding */
-    font-size: 16px; /* Juster tekststørrelse */
+    border: none; /* Fjern standardkanter */
+    font-size: 16px; /* Gør teksten større */
     font-weight: bold;
-    text-transform: uppercase; /* Store bogstaver */
     cursor: pointer;
-    transition: all 0.3s ease; /* Glidende overgang */
+    position: relative; /* Tilføj mulighed for pseudo-element placering */
+    padding: 10px 15px; /* Lidt vandret padding */
+    text-transform: uppercase; /* Store bogstaver */
+    transition: color 0.3s ease; /* Glidende farveovergang */
 }
 
-.filter-buttons button:nth-child(2):hover {
-    background-color: white; /* Hvid baggrund på hover */
-    color: black; /* Sort tekst på hover */
-    border: 2px solid white; /* Hvid kant på hover */
+.filter-buttons button:hover {
+    color: #B56733; /* Orange tekstfarve på hover */
+}
+
+.filter-buttons button::after {
+    content: ""; /* Tilføj en dekorativ linje */
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Juster linjens position under teksten */
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0); /* Start linjen skjult */
+    transform-origin: left; /* Begynd animation fra venstre */
+    transition: transform 0.3s ease; /* Glidende animation */
+}
+
+.filter-buttons button:hover::after {
+    transform: scaleX(1); /* Gør linjen synlig på hover */
+    background-color: #B56733;
 }
 
 .workshop-list {
