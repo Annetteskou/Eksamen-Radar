@@ -367,3 +367,138 @@ button[type="submit"]:hover {
   display: inline-block; /* Holder størrelsen konsekvent */
   margin-top: 10px; /* Lidt luft ovenover */
 }
+
+/* Mobil-styling (maksimal bredde: 768px) */
+@media (max-width: 768px) {
+    /* Workshops Header */
+    .workshops-header h1 {
+        font-size: 24px; /* Reducer overskriftens størrelse */
+        padding: 10px 20px; /* Mindre padding */
+    }
+
+    .workshops-header::after {
+        width: 100px; /* Gør den blå boks mindre */
+        height: 30px; 
+        right: 50%; /* Centrerer boksen */
+        transform: translateX(50%); /* Perfekt centrering */
+    }
+
+    .workshops-header::before {
+        width: 30px; 
+        height: 10px; 
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 80px;
+    }
+
+    /* Søgefelt og knapper */
+    .search-input {
+        width: 90%; /* Fylder næsten hele skærmens bredde */
+        margin: 0 auto; /* Centrerer søgefeltet */
+    }
+
+    .filter-buttons {
+        flex-direction: column; /* Stakker knapperne vertikalt */
+        align-items: center; /* Centrerer dem */
+        margin-left: 0;
+    }
+
+    .filter-buttons button {
+        width: 90%; /* Gør knapperne brede */
+        margin-bottom: 10px; /* Luft mellem knapperne */
+    }
+
+    /* Workshops liste */
+    .workshop-list {
+        margin: 0; /* Fjerner ekstra marginer */
+        gap: 20px; /* Reducerer afstand mellem workshops */
+    }
+
+    .workshop-item {
+        flex-direction: column; /* Stak indholdet vertikalt */
+        gap: 20px; /* Luft mellem elementerne */
+        margin: 10px; /* Reduceret margin */
+    }
+
+    .workshop-item img {
+        width: 100%; /* Billeder fylder hele bredden */
+    }
+
+    .workshop-details {
+        padding: 20px; /* Reducerer padding */
+    }
+
+    .buttons {
+        flex-direction: column; /* Stakker knapperne vertikalt */
+        gap: 10px; /* Luft mellem knapperne */
+        position: static; /* Fjern absolut positionering */
+        margin-top: 10px; /* Luft ovenover */
+    }
+
+    .buttons button {
+        width: 100%; /* Gør knapperne brede */
+    }
+
+    /* Dato-sektionen */
+    .workshop-date {
+        position: static; /* Fjern absolut positionering */
+        text-align: center; /* Centrer teksten */
+        margin-bottom: 10px; /* Luft under datoen */
+    }
+
+    /* Idéer til workshops */
+    textarea {
+        width: 95%; /* Fylder næsten hele skærmen */
+        max-width: none; /* Fjerner grænsen på 800px */
+        height: 150px; /* Reducerer højden */
+    }
+
+    button[type="submit"] {
+        width: 90%; /* Gør knappen bredere */
+        margin: 0 auto; /* Centrer knappen */
+    }
+/* Vil du vide mere sektion */
+.more-about-radar {
+    margin-top: 50px;
+    margin-bottom: -30px;
+  }
+  
+  /* Artikel sektion */
+  .artikler {
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+  }
+  
+  .artikel {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .artikel img {
+    margin-bottom: 10px;
+  }
+  
+  .artikel h3 {
+    font-size: 1.5rem;
+  }
+  
+  .artikel p {
+    font-size: 1.2rem;
+  }
+  
+  .artikel:hover {
+    transform: none; 
+    transition: none; 
+  }
+  
+  .artikel:hover img {
+    transform: none; 
+    transition: none; 
+  }
+  
+  .read-more {
+    font-size: 2rem;
+  }
+
+}
