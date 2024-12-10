@@ -1,7 +1,7 @@
 /*----WORKSHOPS SEKTION---- */
 .workshops-header {
+    position: relative; /* Gør det muligt at placere dekorative elementer relativt */
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .workshops-header h1 {
@@ -10,10 +10,36 @@
     color: #F4F1EA;
     padding: 15px 30px;
     display: inline-block;
-    margin-bottom: 10px;
-    margin-top: 20px; /* Tilføj lidt luft foroven */
+    margin-bottom: 100px;
+    margin-top: 40px; /* Luft foroven */
     letter-spacing: 2px; /* Giver teksten mere "luft" */
+    z-index: 2; /* Sørger for, at teksten altid er over andre elementer */
+    position: relative; /* Gør det muligt at placere elementer i forhold til teksten */
 }
+
+.workshops-header::after {
+    content: "";
+    position: absolute;
+    right: 480px; 
+    top: 40%; 
+    transform: translateY(-50%); /* Justering for perfekt vertikal centrering */
+    width: 405px; /* Bredde på den blå boks */
+    height: 50px; /* Højde på den blå boks */
+    background-color: #232768;  
+    z-index: 1; /* Sørger for, at den blå boks ligger bag teksten */
+}
+
+.workshops-header::before {
+    content: "";
+    position: absolute;
+    right: 475px; /* Justerer den mindre orange boks */
+    bottom: 105px; /* Placerer den orange boks under den blå */
+    width: 50px; /* Bredde på den orange boks */
+    height: 30px; /* Højde på den orange boks */
+    background-color: #b65c43; /* Orange farve */
+    z-index: 1; /* Sørger for, at den ligger bag teksten */
+}
+
 
 .search-input {
     background-color: black; 
@@ -58,7 +84,7 @@
 }
 
 .filter-buttons button:hover {
-    color: #B56733; /* Orange tekstfarve på hover */
+    color:  #b65c43;  /* Orange tekstfarve på hover */
 }
 
 .filter-buttons button::after {
@@ -75,7 +101,7 @@
 
 .filter-buttons button:hover::after {
     transform: scaleX(1); /* Gør linjen synlig på hover */
-    background-color: #B56733;
+    background-color: #b65c43; 
 }
 
 .workshop-list {
@@ -93,7 +119,7 @@
     padding: 20px;
     margin: 10px 0; /* Giver mere afstand mellem hver boks */
     height: auto; 
-    margin-left: 100px;
+    margin-left: 90px;
     margin-right: 100px;
 }
 
@@ -161,15 +187,15 @@
 }
 
 .buttons button:nth-child(1) {
-    background-color: #B56733; /* Orange baggrund */
+    background-color: #b65c43;  /* Orange baggrund */
     color: black; /* Sort tekst */
-    border: 2px solid #B56733; /* Orange kant */
+    border: 2px solid #b65c43;  /* Orange kant */
 }
 
 .buttons button:nth-child(1):hover {
     background-color: black; /* Sort baggrund på hover */
-    color: #B56733; /* Orange tekst på hover */
-    border: 2px solid #B56733; /* Orange kant på hover */
+    color: #b65c43;  /* Orange tekst på hover */
+    border: 2px solid #b65c43; /* Orange kant på hover */
     transform: scale(1.05); /* Lidt zoom-effekt på hover */
 }
 
@@ -180,7 +206,7 @@
 }
 
 .buttons button:nth-child(2):hover {
-    background-color: #B56733;
+    background-color: #F4F1EA; 
     color: #232768; 
     border: 2px solid #232768; 
     transform: scale(1.05); /* Lidt zoom-effekt på hover */
@@ -204,13 +230,10 @@
 }
 
 .buttons button:nth-child(2):after {
-    border: solid #B56733; /* Orange pil */
+    border: solid #b65c43;  /* Orange pil */
     border-width: 2px 2px 0 0;
 }
 
-.buttons button:hover:after {
-    border-color: #F4F1EA; /* Ændrer pilens farve til hvid på hover */
-}
 
 .workshop-navigation {
     display: flex;
