@@ -209,8 +209,7 @@
 }
 
 /* ----RESPONSIV TIL MOBIL---- */
-@media (max-width: 480px) {
-
+@media (max-width: 768px) {
 /* Hero sektion*/
 .hero {
   height: 250px; 
