@@ -377,12 +377,37 @@ button[type="submit"]:hover {
 
 /* Gør "Læs mere" større */
 .laas-mere {
-  font-size: 1.5rem; 
-  font-weight: bold; 
-  text-align: center; 
-  display: inline-block; /* Holder størrelsen konsekvent */
-  margin-top: 10px; /* Lidt luft ovenover */
+  position: relative; /* Nødvendigt for at placere pseudo-elementet */
+  text-decoration: none;
+  color: #F4F1EA;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease; /* Glidende farveovergang */
+  padding-bottom: 5px; /* Giver plads til linjen */
 }
+
+.laas-mere:hover {
+  color: #b65c43; /* Skift tekstfarve på hover */
+}
+
+.laas-mere::after {
+  content: ""; /* Tilføjer den dekorative linje */
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Placerer linjen lige under teksten */
+  width: 100%;
+  height: 2px;
+  background-color: #b65c43; /* Linjens farve */
+  transform: scaleX(0); /* Gør linjen usynlig ved at skalere til 0 */
+  transform-origin: left; /* Start animationen fra venstre */
+  transition: transform 0.3s ease; /* Glidende animation */
+}
+
+.laas-mere:hover::after {
+  transform: scaleX(1); /* Udvid linjen til fuld bredde ved hover */
+}
+
 
 /* ----RESPONSIV TIL MOBIL---- */
 @media (max-width: 768px) {
@@ -542,97 +567,109 @@ button[type="submit"]:hover {
 .laas-mere {
     font-size: 2rem;
 }
-
 }
 
 /* ----RESPONSIV TIL TABLET---- */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  /* Workshops header */
-  .workshops-header h1 {
-    font-size: 28px; /* Reducer størrelsen på teksten */
-    padding: 10px 20px; 
+/* Workshops header */
+.workshops-header h1 {
+    font-size: 40px;
+    padding: 15px 25px;
+    margin-bottom: 80px;
+    margin-top: 30px;
   }
 
   .workshops-header::after {
-    right: 150px; /* Juster den blå boks position */
-    width: 300px; 
-    height: 40px; 
-  }
+    display: none;
+}
 
-  .workshops-header::before {
-    right: 140px; /* Juster den orange boks position */
-    bottom: 90px; 
-    width: 40px; 
-    height: 20px; 
-  }
+.workshops-header::before {
+    display: none;
+}
 
-  /* Søgefelt og filter knapper */
-  .search-input {
-    width: 180px; /* Mindre bredde på søgefeltet */
-    font-size: 14px; /* Reducer tekststørrelsen */
-  }
-
+  /* Søgefelt og filter-knapper */
   .filter-buttons {
-    margin-left: 50px; /* Mindre margin */
-    gap: 5px; /* Mindre afstand mellem knapper */
+    margin-left: 100px;
+    gap: 20px;
+  }
+
+  .filter-buttons button {
+    font-size: 1.5rem;
+    height: 60px;
+}
+
+  .search-input {
+    width: 250px;
+    font-size: 20px;
   }
 
   /* Workshops liste */
   .workshop-list {
-    gap: 20px; /* Mindre afstand mellem workshops */
-    margin-left: 20px; 
-    margin-right: 20px;
+    gap: 70px;
+  }
+
+  .workshop-date {
+    font-size: 1.4rem;
+    top: -60px;
   }
 
   .workshop-item {
-    flex-direction: column; /* Stak billede og tekst vertikalt */
-    gap: 10px; /* Mindre mellemrum */
+    flex-direction: row; /* Behold billeder og tekst på samme linje */
+    gap: 20px;
+    padding: 15px;
   }
 
   .workshop-item img {
-    width: 100%; /* Billedet fylder hele bredden */
+    width: 45%;
   }
 
   .workshop-details {
-    padding: 20px; 
+    padding: 30px;
   }
 
   .workshop-details h2 {
-    font-size: 24px; 
+    font-size: 30px;
+    text-align: left;
   }
 
   .buttons {
-    position: static; /* Gør knapperne statiske */
-    margin-top: 10px; /* Tilføj afstand over knapperne */
-    justify-content: center; /* Centrer knapperne */
+    flex-direction: row; /* Sørg for, at knapper er på én linje */
+    justify-content: flex-start; /* Placer knapper til venstre */
+    margin-top: -50px;
+    margin-bottom: -10px;
   }
 
-  /* Forrige og næste navigation */
+  .buttons button {
+    padding: 8px 16px;
+    font-size: 22px;
+  }
+
+  /* Navigation */
   .workshop-navigation {
-    justify-content: space-around; /* Gør navigationen mere centreret */
-    font-size: 16px; 
-    margin: 20px 0; /* Luft omkring navigationen */
+    justify-content: space-between;
+    margin: 20px 10px;
+    font-size: 25px;
   }
 
   .workshop-navigation .prev,
   .workshop-navigation .next {
-    font-size: 30px; /* Mindre størrelse på pilene */
+    display: none;
   }
 
   /* Idéer til workshops */
   .workshop-ideas h2 {
-    font-size: 20px; 
+    font-size: 35px;
   }
 
   textarea {
-    width: 100%; /* Fyld hele bredden */
-    max-width: 100%; /* Fjern maks-bredde */
-    height: 150px; 
+    width: 100%;
+    height: 200px;
+    font-size: 1.7rem;
   }
 
   button[type="submit"] {
-    padding: 8px 20px; 
-    font-size: 14px; 
+    padding: 10px 25px;
+    font-size: 30px;
   }
 
 

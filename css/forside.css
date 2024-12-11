@@ -102,7 +102,7 @@
 }
 
 /* Intro billede */
-.intro-image {
+.intro-billede {
   position: relative;
   display: block;
   top: -500px;
@@ -112,14 +112,14 @@
   z-index: 1; /* Sørg for, at billedet ikke overlapper teksten */
 }
 
-.intro-image img {
+.intro-billede img {
   width: 100%;
   height: auto;
   display: block; /* Fjern eventuel ekstra afstand */
 }
 
 /* Intro blå firkant ved siden af billede */
-.intro-image::before {
+.intro-billede::before {
   content: '';
   position: absolute;
   top: -20px; 
@@ -133,13 +133,13 @@
 }
 
 /* Vil du vide mere? */
-.more-about-radar {
+.mere-om-radar {
   text-align: center; 
   margin-top: -450px;
   margin-bottom: -50px;
 }
 
-.more-about-radar h2 {
+.mere-om-radar h2 {
   font-size: 2rem; 
   color: #F4F1EA;
   font-weight: bold; 
@@ -200,7 +200,7 @@
 }
 
 /* Gør "Læs mere" større */
-.read-more {
+.laas-mere {
   font-size: 1.5rem; 
   font-weight: bold; 
   text-align: center; 
@@ -260,23 +260,23 @@
     padding: 10px;
 }
 
-.intro-image {
+.intro-billede {
   position: static; /* Fjern absolut positionering */
   margin: 0 auto; /* Centrer billedet */
   width: 100%; /* Sørg for, at det fylder containeren */
 }
 
-.intro-image img {
+.intro-billede img {
   width: 100%;
   display: block; /* Sørg for, at billedet ikke skjules */
 }
 
-.intro-image::before {
+.intro-billede::before {
 display: none;
 }
 
 /* Vil du vide mere sektion */
-.more-about-radar {
+.mere-om-radar {
   margin-top: 50px;
   margin-bottom: -30px;
 }
@@ -315,7 +315,7 @@ display: none;
   transition: none; 
 }
 
-.read-more {
+.laas-mere {
   font-size: 2rem;
 }
 }
@@ -353,7 +353,7 @@ display: none;
   font-size: 1.7rem; 
 }
 
-.intro-image {
+.intro-billede {
   width: 100%; /* Sørg for, at billedet fylder containeren */
   margin: 0 auto;
   margin-left: -450px;
@@ -361,7 +361,7 @@ display: none;
   margin-bottom: -600px;
 }
   
-.intro-image img {
+.intro-billede img {
   width: 90%;
   height: auto; /* Bevar proportioner */
   display: block;
@@ -378,11 +378,11 @@ display: none;
 }
 
 /* Vil du vide mere sektion */
-.more-about-radar h2 {
+.mere-om-radar h2 {
   font-size: 2.6rem; 
 }
 
-.more-about-radar {
+.mere-om-radar {
   margin-top: 200px;
   margin-bottom: -20px;
 }
@@ -424,7 +424,7 @@ display: none;
   transition: none; 
 }
 
-.read-more {
+.laas-mere {
   font-size: 2rem;
 }
 }
