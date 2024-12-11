@@ -344,6 +344,15 @@ blockquote::before {
     width: 110%; 
     height: auto; 
     margin-bottom: 15px; 
+    transition: transform 0.3s ease; /* Gør billedet glidende ved zoom */
+}
+
+.frivillig:hover img {
+    transform: scale(1.1); /* Zoomer billedet lidt mere ved hover */
+}
+
+.frivillig:hover {
+  transform: scale(1.05); /* Forstørrer artiklen lidt */
 }
 
 
@@ -353,16 +362,36 @@ blockquote::before {
     margin-bottom: 15px;
 }
 
-
+/* Læs mere*/
 .laas-mere {
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #F4F1EA;
-    text-decoration: none;
+  position: relative; /* Nødvendigt for at placere pseudo-elementet */
+  text-decoration: none;
+  color: #F4F1EA;
+  font-size: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease; /* Glidende farveovergang */
+  padding-bottom: 5px; /* Giver plads til linjen */
 }
 
 .laas-mere:hover {
-    color: #c75542;
+  color: #b65c43; /* Skift tekstfarve på hover */
+}
+
+.laas-mere::after {
+  content: ""; /* Tilføjer den dekorative linje */
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Placerer linjen lige under teksten */
+  width: 100%;
+  height: 2px;
+  background-color: #b65c43; /* Linjens farve */
+  transform: scaleX(0); /* Gør linjen usynlig ved at skalere til 0 */
+  transform-origin: left; /* Start animationen fra venstre */
+  transition: transform 0.3s ease; /* Glidende animation */
+}
+
+.laas-mere:hover::after {
+  transform: scaleX(1); /* Udvid linjen til fuld bredde ved hover */
 }
 
 /* ----RESPONSIVT TIL IPHONE---- */

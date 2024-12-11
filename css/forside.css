@@ -199,13 +199,36 @@
   display: inline-block;
 }
 
-/* Gør "Læs mere" større */
+/* Læs mere */
 .laas-mere {
-  font-size: 1.5rem; 
-  font-weight: bold; 
-  text-align: center; 
-  display: inline-block; /* Holder størrelsen konsekvent */
-  margin-top: 10px; /* Lidt luft ovenover */
+  position: relative; /* Nødvendigt for at placere pseudo-elementet */
+  text-decoration: none;
+  color: #F4F1EA;
+  font-size: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease; /* Glidende farveovergang */
+  padding-bottom: 5px; /* Giver plads til linjen */
+}
+
+.laas-mere:hover {
+  color: #b65c43; /* Skift tekstfarve på hover */
+}
+
+.laas-mere::after {
+  content: ""; /* Tilføjer den dekorative linje */
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Placerer linjen lige under teksten */
+  width: 100%;
+  height: 2px;
+  background-color: #b65c43; /* Linjens farve */
+  transform: scaleX(0); /* Gør linjen usynlig ved at skalere til 0 */
+  transform-origin: left; /* Start animationen fra venstre */
+  transition: transform 0.3s ease; /* Glidende animation */
+}
+
+.laas-mere:hover::after {
+  transform: scaleX(1); /* Udvid linjen til fuld bredde ved hover */
 }
 
 /* ----RESPONSIV TIL MOBIL---- */

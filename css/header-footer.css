@@ -8,7 +8,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.5;
   background-color: #3A3A3A;
 }
@@ -269,16 +269,16 @@ font-weight: bold;
   margin: 8px 0; /* Reduceret afstand mellem linjer */
 }
 
-.footer-kontakt .footer-social-ikoner {
+.footer-social-ikoner {
   margin-top: 100px; /* Afstand til ikonerne */
 }
 
-.footer-kontakt .footer-social-ikoner a {
+.footer-social-ikoner a {
   display: inline-block;
   margin-right: 15px; /* Afstand mellem ikoner */
 }
 
-.footer-kontakt .footer-social-ikoner img {
+.footer-social-ikoner img {
   width: 40px; /* Ikonernes bredde */
   height: 40px; /* Ikonernes højde */
   vertical-align: middle; /* Juster lodret med tekst */
