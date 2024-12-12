@@ -44,6 +44,16 @@
     color: #E8E8E8;
 }
 
+.hvad-radar-kan {
+    color: #E8E8E8;
+    line-height: 1.8;
+    font-size: 1.2rem;
+}
+
+.hvad-radar-kan ul li {
+    margin-left: 20px;
+}
+
 /* Formularsektion */
 .frivillig-form-container {
     flex: 1;
@@ -130,24 +140,25 @@
 }
 
 
-.faellesskab-content p {
-    font-size: 1.2rem; 
+.faellesskab-content ul {
+    font-size: 1rem; 
     line-height: 1.8;
-    text-align: center;
+    margin-left: 10px;
 }
 
 /* Pynteelementer - Dekorative felter */
-.faellesskab::before {
+.faellesskab::after {
     content: ''; /* Pseudo-element */
-    position: absolute;
-    top: 25%; /* Start øverst */
-    left: 69%; /* Centrer firkanten horisontalt */
-    transform: translateX(-50%) translateY(-30%); 
-    width: 100px; 
+    position: absolute; /* Ændret til absolute */
+    top: 17%; /* Flyt op/ned */
+    left: 63%; /* Flyt venstre/højre */
+    transform: translateX(-50%) translateY(-30%);
+    width: 200px; 
     height: 150px; 
     background-color: #b65c43; 
     z-index: 0; /* Sørg for, at det er bag teksten */
 }
+
 
 /* ----CAROUSEL SEKTION---- */
 .carousel-container {
@@ -526,9 +537,8 @@ blockquote::before {
         font-size: 2.5rem; 
         margin-bottom: 20px;
     }
-    .faellesskab-content p {
-        font-size: 1.7rem; 
-        line-height: 1.6;
+    .faellesskab-content ul {
+        font-size: 1.5rem; 
     }
 
     .faellesskab::before {
