@@ -20,6 +20,7 @@
   color: #000000; 
   font-size: 2.5rem; 
   font-weight: bold;
+  text-shadow: 0 10px 12px rgba(255, 255, 255, 0.79); /* Lys */
 }
 
 /* ----INTRODUKTION SEKTION---- */
@@ -73,11 +74,11 @@
 
 
 /* Specifik styling for Kultur-firkant */
-.intro-button.kultur {
+.intro-button.music {
   background-color: #232768;
   width: 400px;
   right: 10px;
-  font-size: 1.3rem; 
+  font-size: 1.6rem;
 }
 
 /* Tilføj dekorative linjer til Kultur-knap */
@@ -251,7 +252,7 @@
 }
 
 /* Intro sektion */
-.intro-button.kultur::after {
+.intro-button.music::after {
   display: none;
 }
 
@@ -370,7 +371,7 @@ display: none;
   font-size: 2rem; 
 }
 
-.intro-button.kultur {
+.intro-button.music {
   width: 450px;
   height: 80px;
   font-size: 1.7rem; 
