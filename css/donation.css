@@ -105,27 +105,6 @@ button.donate-btn:hover {
     color:  #F4F1EA; 
 }
 
- /* Radio knapper */
-.donation-muligheder {
-    display: flex; /* Placerer elementerne side om side */
-    justify-content: center; /* Centrerer dem vandret */
-    align-items: center; /* Justerer dem lodret */
-    gap: 30px; /* Giver afstand mellem de to elementer */
-    margin-bottom: 20px; /* Lidt afstand under valgmulighederne */
-}
-
-.donation-muligheder label {
-    font-size: 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center; /* Justerer radioknap og tekst lodret */
-    gap: 8px; /* Afstand mellem radioknap og tekst */
-}
-
-.donation-muligheder input[type="radio"] {
-    accent-color: #f36c21; /* Radioknappens farve */
-}
-
  /* ----DIN STØTTE ER VIGTIGT TEKST SEKTION---- */
 .section-container {
     max-width: 1200px;
@@ -369,21 +348,37 @@ button.donate-btn:hover {
 }
 
 /* ----DEL DINE MINDER SEKTION---- */
+/* ----DEL DINE MINDER SEKTION---- */
 .share-memories {
-    display: inline-block;
-    margin-top: 20px;
-    color:  #F4F1EA;
-    font-size: 1.5rem;
+    display: inline-block; /* Gør teksten som en inline-knap */
+    text-align: center;
+    font-size: 1.5rem; 
     font-weight: bold;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
-    margin-bottom: 30px;
+    color: #F4F1EA; 
+    margin: 20px auto; /* Centrerer teksten og tilføjer luft over og under */
+    text-decoration: none; /* Fjern standard understregning */
+    position: relative; /* Tillader brug af ::after */
+    transition: color 0.3s ease; /* Glidende farveændring */
 }
 
 .share-memories:hover {
-    background-color: #b65c43; /* Orange hover-effekt */
+    color: #b65c43; /* Ændrer tekstfarve ved hover */
 }
 
+.share-memories::after {
+    content: ""; /* Tilføjer en dekorativ linje */
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Lige under teksten */
+    width: 0%; /* Start som usynlig */
+    height: 2px;
+    background-color: #b65c43; /* Linjens farve */
+    transition: width 0.3s ease; /* Glidende animation */
+}
+
+.share-memories:hover::after {
+    width: 100%; /* Udvid linjen til tekstens fulde bredde ved hover */
+}
 
  /* ----VIL DU VIDE MERE SEKTION---- */
 .vil-du-vide-mere {
