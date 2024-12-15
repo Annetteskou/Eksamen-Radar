@@ -133,10 +133,107 @@
   z-index: 2; /* Sørg for, at den vises over baggrunden */
 }
 
+/* ----TESTIMORIALS SEKTION---- */
+.testimonials {
+  background-color: #3A3A3A;
+  padding: 50px 20px;
+  text-align: center;
+  position: relative;
+  margin-top: -450px;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0; 
+  color:  #F4F1EA;
+  background-color: #b65c43; 
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+/* Testimonial Container */
+.testimonials-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+/* Testimonial Hvide Bokse */
+.testimonial {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 5px;
+}
+
+/* Billede Styling */
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #b65c43;
+  margin: 0 20px; /* Plads mellem billedet og teksten */
+}
+
+/* Testimonial Indhold */
+.testimonial-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.testimonial-content blockquote {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+/* Navne Styling */
+.testimonial-content p {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Testimonial læs mere*/
+.las-mere {
+  font-size: 1rem;
+  color: #232768; 
+}
+
+
+/* Zigzag-positionering */
+.zigzag-venstre {
+  align-self: flex-start;
+  margin-left: 0;
+  text-align: left; /* Tilpasser tekstens retning */
+  display: flex;
+  flex-direction: row; /* Billede til venstre, tekst til højre */
+}
+
+.zigzag-hoojre {
+  align-self: flex-end;
+  margin-right: 0;
+  text-align: right; /* Tilpasser tekstens retning */
+  display: flex;
+  flex-direction: row-reverse; /* Billede til højre, tekst til venstre */
+}
+
 /* Vil du vide mere? */
 .mere-om-radar {
   text-align: center; 
-  margin-top: -450px;
   margin-bottom: -50px;
 }
 
@@ -299,6 +396,44 @@
 display: none;
 }
 
+/* Testimonials */
+.testimonials {
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.testimonials h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.testimonials-container {
+  flex-direction: column; /* Layout bliver vertikalt */
+  gap: 20px;
+}
+
+.testimonial {
+  flex-direction: column; /* Billede og tekst under hinanden */
+  text-align: center;
+}
+
+.testimonial img {
+  margin-bottom: 10px; /* Afstand under billedet */
+}
+
+.testimonial-content p {
+  font-size: 1rem;
+}
+
+.testimonial-content blockquote {
+  font-size: 1.3rem;
+}
+
+/* Testimonial læs mere*/
+.las-mere {
+  font-size: 1.8rem; 
+}
+
 /* Vil du vide mere sektion */
 .mere-om-radar {
   margin-top: 50px;
@@ -397,8 +532,32 @@ display: none;
   margin-bottom: 20px; /* Giv lidt luft under teksten */
 }
 
-.intro-image::before {
+.intro-billede::before {
   display: none;
+}
+
+ /* Testimonials sektion */
+ .testimonials {
+  padding: 20px;
+  margin-top: 150px;
+}
+
+.testimonials h2 {
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+}
+
+.testimonial-content blockquote {
+  font-size: 1.3rem;
+}
+
+.testimonials p {
+  font-size: 1.3rem;
+} 
+
+/* Testimonial læs mere*/
+.las-mere {
+  font-size: 1.8rem; 
 }
 
 /* Vil du vide mere sektion */
@@ -407,7 +566,7 @@ display: none;
 }
 
 .mere-om-radar {
-  margin-top: 200px;
+  margin-top: 20px;
   margin-bottom: -20px;
 }
   

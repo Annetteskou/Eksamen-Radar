@@ -274,6 +274,12 @@ button.donate-btn:hover {
     color: #555;
 }
 
+/* Testimonial læs mere*/
+.las-mere {
+    font-size: 1rem;
+    color: #232768; 
+}
+
 /* Zigzag-positionering */
 .zigzag-venstre {
     align-self: flex-start;
@@ -349,15 +355,17 @@ button.donate-btn:hover {
 
 /* ----DEL DINE MINDER SEKTION---- */
 .del-minder {
-    display: inline-block; /* Gør teksten som en inline-knap */
-    text-align: center;
-    font-size: 1.5rem; 
+    display: block; /* Sørg for, at teksten bliver behandlet som en blok */
+    text-align: center; 
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #F4F1EA; 
-    margin: 20px auto; /* Centrerer teksten og tilføjer luft over og under */
+    color: #F4F1EA;
+    margin: 20px auto; /* Sørger for luft over/under og centrerer horisontalt */
     text-decoration: none; /* Fjern standard understregning */
-    position: relative; /* Tillader brug af ::after */
+    max-width: fit-content; /* Sørger for, at teksten ikke strækker sig */
+    position: relative; /* Tillader brug af ::after til dekoration */
     transition: color 0.3s ease; /* Glidende farveændring */
+    margin-bottom: 100px;
 }
 
 .del-minder:hover {
@@ -574,6 +582,11 @@ button.donate-btn:hover {
         font-size: 1.3rem;
     }
 
+    /* Testimonial læs mere*/
+    .las-mere {
+    font-size: 1.8rem; 
+    }
+
     /* Sammenmsakber vi minder Sektion */
     .minder-section {
         padding: 10px 0; /* Mindre padding */
@@ -606,7 +619,7 @@ button.donate-btn:hover {
     /* Del din minder Sektion */
     .del-minder {
         font-size: 1.8rem;
-        margin-bottom: 50px;
+        margin-bottom: 100px;
     }
     
     /* Vil du vide mere artikler Sektion */
@@ -776,10 +789,15 @@ button.donate-btn:hover {
         display: none;
     }
 
+    /* Testimonial læs mere*/
+    .las-mere {
+    font-size: 1.8rem; 
+    }
+
     /* Del dine minder sektion */
     .del-minder {
         font-size: 2.2rem;
-        margin-bottom: 50px;
+        margin-bottom: 100px;
     }
 
     /* Vil du vide mere artikler Sektion */

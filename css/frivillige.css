@@ -283,7 +283,7 @@ blockquote {
     position: relative;
     z-index: 1; /* Sørger for, at teksten altid er over cirklen */
     font-style: italic;
-    color: #F4F1EA;
+    color: #fff;
     line-height: 1.6; 
     font-size: 1.1rem; 
     text-align: center;
@@ -298,14 +298,14 @@ blockquote cite {
     font-weight: bold;
     font-size: 1rem; 
     text-transform: none; /* Undgå store bogstaver */
-    color: #E8E8E8;
+    color: #fff;
     text-align: center;
 }
 
 blockquote::before {
     content: '“'; /* Citatmærket */
     font-size: 5rem; /* Gør citatmærket større */
-    color: #E8E8E8;
+    color: #fff;
     display: block;
     margin-bottom: -50px; /* Tættere på teksten */
     margin-top: -40px;
