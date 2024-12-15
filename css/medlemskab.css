@@ -14,6 +14,7 @@
     color: #FFF;
     background-color: rgba(230, 110, 81, 0.7);
     padding: 30px 60px;
+    text-shadow: 0 10px 12px rgba(5, 5, 5, 0.79); /* Skygge */
 }
 
 /* ----MEDLEMSFORDELE SEKTION---- */
@@ -111,14 +112,13 @@
     transform: scaleX(1); /* Holder linjen fuldt udvidet */
 }
 
-  
-  .cta-button:hover::after {
-    transform: scaleX(1); /* Udvid linjen til fuld bredde ved hover */
-  }
+.cta-button:hover::after {
+    transform: scaleX(1); /* Udvider linjen til fuld bredde ved hover */
+}
 
 /* ----MINDER-GALLERI SEKTION---- */
 /* Sektionens styling */
-.memory-section {
+.minder-section {
     position: relative; /* Sikrer, at absolut placerede elementer er relative til denne container */
     display: flex;
     align-items: center; /* Justerer elementer vertikalt */
@@ -128,7 +128,7 @@
     margin-bottom: 40px;
 }
 
-.memory-section .orange-box {
+.minder-section .orange-boks {
     position: absolute;
     width: 100px;
     height: 50px;
@@ -140,7 +140,7 @@
     z-index: 1; /* Sørger for, at det orange element ligger bag teksten */
 }
 
-.memory-section h2 {
+.minder-section h2 {
     position: relative; /* Påkrævet for at kunne bruge z-index */
     z-index: 2; /* Sørger for, at teksten og den blå baggrund er øverst */
     background-color: #232768;
@@ -152,7 +152,7 @@
 }
 
 /* Galleriets layout */
-.memories-gallery {
+.minder-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 billeder pr. række */
     gap: 20px;
@@ -161,7 +161,7 @@
     height: auto; /* Bevarer proportionerne */
 }
 
-.memories-gallery img {
+.minder-gallery img {
     width: 100%; /* Gør billederne fleksible til containeren */
     height: 250px; /* Ensartet højde for alle billeder */
     object-fit: cover; /* Beskær billedet til at passe inden for boksen uden deformation */
@@ -170,11 +170,11 @@
     transition: transform 0.3s ease; 
 }
 
-.memories-gallery img:hover {
+.minder-gallery img:hover {
     transform: scale(1.05); /* Lidt forstørrelse på hover */
 }
 /* ----DEL DINE MINDER SEKTION---- */
-.share-memories {
+.del-minder {
     display: block; /* Sørg for, at teksten bliver behandlet som en blok */
     text-align: center; 
     font-size: 1.5rem;
@@ -187,11 +187,11 @@
     transition: color 0.3s ease; /* Glidende farveændring */
 }
 
-.share-memories:hover {
+.del-minder:hover {
     color: #b65c43; /* Ændrer tekstfarve ved hover */
 }
 
-.share-memories::after {
+.del-minder::after {
     content: ""; /* Tilføjer en dekorativ linje */
     position: absolute;
     left: 0;
@@ -202,7 +202,7 @@
     transition: width 0.3s ease; /* Glidende animation */
 }
 
-.share-memories:hover::after {
+.del-minder:hover::after {
     width: 100%; /* Udvid linjen til tekstens fulde bredde ved hover */
 }
 
@@ -381,8 +381,8 @@
     }
 
     .hero-content h1 {
-        font-size: 2.5rem; /* Reducer skrifttypen */
-        padding: 20px 40px; /* Juster padding */
+        font-size: 2rem; /* Reducer skrifttypen */
+        padding: 30px 50px; /* Juster padding */
     }
 
     /* Medlemskab-fordele sektion */
@@ -402,37 +402,36 @@
     }
 
      /* Del dine minder galleri Sektion */
-     .memory-section {
+    .minder-section {
         padding: 10px 0; /* Mindre padding */
         margin-bottom: -30px;
     }
 
-    .memory-section h2 {
+    .minder-section h2 {
         font-size: 1.5rem; /* Mindre skrifttype */
         padding: 10px 20px;
     }
 
-    .memory-section .orange-box {
+    .minder-section .orange-boks {
         width: 100px; /* Mindre bredde */
         height: 40px; /* Mindre højde */
         left: -10px;
-        margin-top: -30px;
+        margin-top: -35px;
     }
 
-    .memories-gallery {
+    .minder-gallery {
         grid-template-columns: 1fr; /* Kun ét billede pr. række */
         gap: 10px;
     }
 
-    .memories-gallery img {
+    .minder-gallery img {
         height: auto; /* Gør billederne fleksible */
         width: 100%; /* Gør billederne fuld bredde */
     }
 
      /* Del dine minder*/
-    .share-memories {
+    .del-minder {
         font-size: 1.8rem;
-    
     }
     
     /* Vil du vide mere artikler Sektion */
@@ -484,7 +483,7 @@
 
     .fordele-billeder,
     .fordele-tekst {
-        max-width: 80%; /* Brug 80% af bredden */
+        max-width: 65%; /* Brug 65% af bredden */
         margin: 0 auto; /* Centrer indholdet */
     }
 
@@ -502,36 +501,35 @@
 
     /* Køb medlemskab knap*/
     .cta-button {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
+    }
+
+    /* Sammen skaber vi minder*/
+    .minder-section h2 {
+        font-size: 2.2rem; 
+    }
+    
+    /* Del dine minder*/
+    .del-minder {
+        font-size: 2.2rem;
     }
 
     /* Fællesskab sektion */
     .faellesskab-content {
         padding: 30px; /* Mindre padding */
+        margin-top: 50px;
     }
 
     .faellesskab-content h3 {
-        font-size: 2.5rem; /* Reducer overskriftens størrelse */
+        font-size: 3rem; /* Reducer overskriftens størrelse */
     }
 
     .faellesskab-content p {
-        font-size: 1.4rem; /* Reducer brødtekstens størrelse */
+        font-size: 1.8rem; /* Reducer brødtekstens størrelse */
     }
     .faellesskab::after {
-    top: 16%; /* Flyt op/ned */
+    top: 15%; /* Flyt op/ned */
     left: 67%; /* Flyt venstre/højre */
-    }            
-
-    .share-memories::after {
-        content: ""; /* Tilføjer en dekorativ linje */
-        position: absolute;
-        left: 0;
-        bottom: -5px; /* Lige under teksten */
-    }
-
-    /* Del dine minder*/
-    .share-memories {
-        font-size: 1.8rem;
     }
 
     /* Vil du vide mere sektion */
@@ -564,7 +562,7 @@
     }
     
     .artikel p {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     
     .artikel:hover {
