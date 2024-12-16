@@ -432,6 +432,18 @@ blockquote::before {
         margin-bottom: 10px;
     }
 
+    /* CAROUSEL SEKTION */
+    .carousel-item {
+        width: 100% !important; /* Gør elementet fuldt ud bredt */
+        max-width: 100% !important;
+    }
+    
+    .carousel-billeder {
+        width: 100% !important; /* Fyld forældrecontaineren */
+        height: auto; /* Bevar billedets proportioner */
+        max-width: 1000px; /* Sæt en maksimal bredde for store billeder */
+    }
+    
     /* Hvad kan Radar tilbyde sektionen */
     .faellesskab-content {
         max-width: 90%;
@@ -462,7 +474,7 @@ blockquote::before {
 
     /* Forfatterens navn */
     blockquote cite {
-        font-size: 0.9rem; /* Mindre skriftstørrelse for forfatteren */
+        font-size: 0.7rem; /* Mindre skriftstørrelse for forfatteren */
         margin-top: 10px; /* Reducér luft mellem teksten og forfatteren */
     }
 
@@ -583,7 +595,7 @@ blockquote::before {
     }
 
     blockquote {
-        font-size: 1.5rem; /* Gør teksten større */
+        font-size: 1.4rem; /* Gør teksten større */
     }
 
     blockquote cite {
