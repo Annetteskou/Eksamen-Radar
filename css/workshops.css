@@ -265,8 +265,9 @@
     text-align: center;
 }
 
-.workshop-ideas h2 {
+.workshop-ideas h4 {
     color: #F4F1EA;
+    font-size: 1.8rem;
 }
 
 /* Skrev her boks */
@@ -278,7 +279,6 @@ textarea {
     border-radius: 5px;
     padding: 10px;
     font-size: 18px;
-    font-family: 'Arial', sans-serif;
     margin: 20px auto;
     display: block; /* Centrer tekstfeltet */
     background-color: #f9f4ef; 
@@ -291,21 +291,23 @@ textarea:focus {
 }
 
 /* Send knap */
-button[type="submit"] {
-    background-color: #F4F1EA;
-    color: black;
-    border: 2px solid black;
-    padding: 5px 30px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.send-knap {
+  background: none;
+  border: 1px solid  black;
+  padding: 5px 20px;
+  color:  black;
+  background-color: #f9f4ef;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Blød overgang */
 }
 
-button[type="submit"]:hover {
-    background-color:  #b65c43;
-    transform: scale(1.05);
+.send-knap:hover {
+  background-color: #b65c43; /* Orange baggrund ved hover */
+  color: white; /* Hvid tekstfarve for kontrast */
+  border-color: #b65c43; /* Matchende orange kant */
 }
 
 /*----VIL DU VIDE MERE SEKTION---- */
@@ -521,13 +523,12 @@ button[type="submit"]:hover {
     font-size: 20px; /* Mindre tekst */
 }
 
-.workshop-ideas button[type="submit"] {
-    width: 40%; /* Gør knappen bredere */
-    font-size: 20px; 
-    padding: 10px; 
-    margin: 10px auto; /* Centrer knappen */
-    margin-bottom: -200px;
-}
+/* Styling til "send"-knap */
+.send-knap {
+  font-size: 1.8em; 
+  padding: 8px 24px; 
+  margin-bottom: 10px;
+  }
 
   /* Artikel sektion */
 .artikler {
@@ -656,7 +657,7 @@ button[type="submit"]:hover {
   }
 
   /* Idéer til workshops */
-  .workshop-ideas h2 {
+  .workshop-ideas h4 {
     font-size: 35px;
   }
 
@@ -666,9 +667,11 @@ button[type="submit"]:hover {
     font-size: 1.7rem;
   }
 
-  button[type="submit"] {
-    padding: 10px 25px;
-    font-size: 30px;
+  /* Styling til "send"-knap */
+  .send-knap {
+  font-size: 1.8em; 
+  padding: 8px 24px; 
+  margin-bottom: -100px;
   }
 
 
