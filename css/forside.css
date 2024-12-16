@@ -13,7 +13,7 @@
 .hero-content {
   background-color: rgba(230, 110, 81, 0.7); /* Halvgennemsigtig baggrund for tekst */
   padding: 20px 40px;
-  margin-left: 15%;
+  margin-left: 500px;
 }
 
 .hero-content h1 {
@@ -24,12 +24,17 @@
 }
 
 /* ----INTRODUKTION SEKTION---- */
+.intro-section {
+  background-color: #3A3A3A; /* Baggrundsfarve */
+  padding: 40px 20px;
+  position: relative;
+  color: #E8E8E8;
+}
+
 .intro-container {
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 20px;
   gap: 20px;
   position: relative;
   color: #E8E8E8;
@@ -133,7 +138,8 @@
   padding: 50px 20px;
   text-align: center;
   position: relative;
-  margin-top: -450px;
+  margin-top: -500px;
+  margin-bottom: 20px;
 }
 
 .testimonials h2 {
@@ -228,7 +234,7 @@
 /* Vil du vide mere? */
 .mere-om-radar {
   text-align: center; 
-  margin-bottom: -50px;
+  margin-bottom: -20px;
 }
 
 .mere-om-radar h2 {
@@ -246,6 +252,7 @@
   align-items: flex-start; /* Sørger for, at artiklerne starter ens */
   background-color: #232768;
   margin-top: 40px;
+  margin-bottom: -20px;
 }
 
 .artikel {
@@ -344,6 +351,10 @@
 }
 
 /* Intro sektion */
+.intro-section {
+  padding: 20px;
+}
+
 .intro-button.music::after {
   display: none;
 }
