@@ -331,11 +331,12 @@ font-weight: bold;
 }
 
 .dropdown li {
-  width: 200px; /* Ens bredde til dropdown-elementer */
+  width: auto; /* Gør bredden tilpasset indholdet */
+  margin: 0; /* Fjern eventuel margin*/
 }
 
 .dropdown a {
-  padding: 30px;
+  padding: 10px 20px;
 }
 
 .menu-toggle:checked + .hamburger-menu + nav .nav-links {
@@ -478,7 +479,7 @@ font-weight: bold;
   }
   
   .dropdown a {
-    padding: 30px;
+    padding: 20px;
   }
 
   /* Nyhedsbrev sektion */
