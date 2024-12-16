@@ -53,7 +53,7 @@ body {
   flex-direction: column;
   background-color: #444; /* Baggrundsfarve for menu */
   position: absolute;
-  top: 60px; /* Juster til din header-højde */
+  top: 60px; 
   right: 0;
   left: 0;
   padding: 20px;

@@ -44,14 +44,8 @@
     color: #E8E8E8;
 }
 
-.hvad-radar-kan {
-    color: #E8E8E8;
-    line-height: 1.8;
-    font-size: 1.2rem;
-}
-
-.hvad-radar-kan ul li {
-    margin-left: 20px;
+.saadan-bliv-frivillig p {
+    margin-bottom: -50px;
 }
 
 /* Formularsektion */
@@ -116,7 +110,7 @@
     align-items: center;
     flex-direction: column; /* Vertikal opstilling */
     position: relative;
-    margin-top: -80px;
+    margin-top: 60px;
 }
 
 
@@ -429,14 +423,22 @@ blockquote::before {
         max-width: 100%;
     }
 
+    .frivillig-form-container {
+        margin-bottom: -20px;
+    }
+
+    /* Tekst sektion */
+    .saadan-bliv-frivillig p {
+        margin-bottom: 10px;
+    }
+
     /* Hvad kan Radar tilbyde sektionen */
     .faellesskab-content {
         max-width: 90%;
     }
 
-    /* Testimonial sektionen */
-     /* Cirklen */
-     .testimonial-circle {
+    /* Testimonial cirkel sektionen */
+    .testimonial-circle {
         width: 280px; /* Juster cirkelstørrelsen */
         height: 280px;
     }
