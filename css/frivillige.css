@@ -548,6 +548,9 @@ blockquote::before {
     }
     
     /* Hvad kan Radar tilbyde SEKTION */
+    .faellesskab {
+        margin-top: 90px;
+    }
     .faellesskab-content h3 {
         font-size: 2.5rem; 
         margin-bottom: 20px;
