@@ -252,7 +252,6 @@
   align-items: flex-start; /* Sørger for, at artiklerne starter ens */
   background-color: #232768;
   margin-top: 40px;
-  margin-bottom: -20px;
 }
 
 .artikel {
